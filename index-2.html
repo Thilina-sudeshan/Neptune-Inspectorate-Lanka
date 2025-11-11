@@ -45,7 +45,178 @@
             max-width: 140px !important;
         }
     }
+.transition-img {
+        filter: brightness(0.65) contrast(1.1);
+        transition: filter 0.4s ease;
+    }
+    .container:hover .transition-img {
+        filter: brightness(1) contrast(1);
+    }
+    @keyframes scrollUp {
+        0%   { transform: translateY(0); }
+        100% { transform: translateY(-50%); }
+    }
+    .scroll-content {
+        display: flex;
+        flex-direction: column;
+    }
+    .scroll-content:hover {
+        animation-play-state: paused;
+    }
+    .item {
+        padding: 8px 0;
+        text-align: center;
+        font-size: 1rem;
+        color: #333;
+        border-bottom: 1px dashed #eee;
+    }
+    .item:nth-child(odd) {
+        background-color: #f9f9f9;
+    }
+    @media (max-width: 992px) {
+        .col-3 { flex: 0 0 50%; max-width: 50%; }
+    }
+    @media (max-width: 576px) {
+        .col-3 { flex: 0 0 100%; max-width: 100%; }
+        .scroll-col { height: 300px !important; }
+        .row > .col-3:nth-child(odd) .scroll-col { border-left: 1px solid #ddd; }
+    }
 </style>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background: #f5f7fa;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+<!--        .header {-->
+<!--            text-align: center;-->
+<!--            margin-bottom: 60px;-->
+<!--            padding: 40px 20px;-->
+<!--            background: linear-gradient(to right, #427fc6, #50bce3);-->
+<!--            color: white;-->
+<!--            border-radius: 15px;-->
+<!--        }-->
+
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.95;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .grid-item {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            border-left: 5px solid #427fc6;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .grid-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, rgba(66, 127, 198, 0.05), rgba(80, 188, 227, 0.05));
+            transition: left 0.4s ease;
+            z-index: 0;
+        }
+
+        .grid-item:hover::before {
+            left: 0;
+        }
+
+        .grid-item:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 15px 30px rgba(66, 127, 198, 0.2);
+            border-left-color: #50bce3;
+        }
+
+        .grid-item-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .grid-item-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #427fc6, #50bce3);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .grid-item:hover .grid-item-icon {
+            transform: rotate(360deg) scale(1.1);
+        }
+
+        .grid-item h3 {
+            color: #2c3e50;
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .grid-item p {
+            color: #555;
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .grid-item {
+                padding: 25px;
+            }
+        }
+    </style>
 </head>
 
 <body class="overflow-x-hidden container-fluid" style="background: #f3e5f5;">
@@ -145,9 +316,9 @@
 
     <script src="../cdn.jsdelivr.net/npm/bootstrap%405.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
+
 </body>
 
-</html>
         </div>
     </div>
 
@@ -211,367 +382,496 @@
                 </div>
             </div>
 
-<div class="row justify-content-center text-center home-intro py-5" style="background: linear-gradient(to right, #427fc6, #50bce3); color: #fff; font-family: 'Georgia', serif; margin-top: 25px;">
-    <div class="col-lg-10 col-md-12">
-        <h2 class="mb-4" style="font-weight: bold; font-size: 2 rem; color:black;">VISION</h2>
 
-        <p class="mb-3" style="text-align: center;"> Our Vision is to be a professional service provider which offers competitive and satisfactory services and our core competence is in inspection, verification, testing and certification with constant improvements in systemization to be world class.</p>
 
-        <h3 class="mt-5 mb-4" style="font-weight: bold; font-size: 2 rem; color:black;">INTEGRITY</h3>
 
-        <p class="mb-3" style="text-align: center;">Genuine, fair, honest and absolute trust worthy behaviour without compromising any of our professional and moral ethical core value which is integrity which is the fabric and culture of our organization and the foremost consideration in all activities. The USP of STB is integrity which is the basic and the End Product.</p>
+    <div class="container" style="padding-top: 60px;">
+        <div class="grid">
+            <!-- Vision -->
+            <div class="grid-item">
+                <div class="grid-item-content">
+                    <div class="grid-item-icon">🎯</div>
+                    <h3>VISION</h3>
+                    <p>Our Vision is to be a professional service provider which offers competitive and satisfactory services and our core competence is in inspection, verification, testing and certification with constant improvements in systemization to be world class.</p>
+                </div>
+            </div>
 
-        <h3 class="mt-5 mb-4" style="font-weight: bold; font-size: 2 rem; color:black;">TECHNOLOGY</h3>
+            <!-- Integrity -->
+            <div class="grid-item">
+                <div class="grid-item-content">
+                    <div class="grid-item-icon">🤝</div>
+                    <h3>INTEGRITY</h3>
+                    <p>Genuine, fair, honest and absolute trust worthy behaviour without compromising any of our professional and moral ethical core value which is integrity which is the fabric and culture of our organization and the foremost consideration in all activities. The USP of STB is integrity which is the basic and the End Product.</p>
+                </div>
+            </div>
 
-        <p class="mb-3" style="text-align: center;">Advanced state of the art technology is the standardization for development of our organizations. It’s our constant effort to seek the zenith of innovation, continuous improvement, strategizing and customizing.</p>
+            <!-- Technology -->
+            <div class="grid-item">
+                <div class="grid-item-content">
+                    <div class="grid-item-icon">💻</div>
+                    <h3>TECHNOLOGY</h3>
+                    <p>Advanced state of the art technology is the standardization for development of our organizations. It's our constant effort to seek the zenith of innovation, continuous improvement, strategizing and customizing. Integrity is the Fiber and Culture which is the basic and Final Product.</p>
+                </div>
+            </div>
 
-        <p class="mb-3" style="text-align: center;">Integrity is the Fiber and Culture which is the basic and Final Product.</p>
+            <!-- Ethics -->
+            <div class="grid-item">
+                <div class="grid-item-content">
+                    <div class="grid-item-icon">⚖️</div>
+                    <h3>ETHICS</h3>
+                    <p>We uphold genuine, fair, and honest conduct, fostering absolute trust and transparency in every endeavor. Ethics form the foundation and fabric of our organization, guiding every action, decision, and relationship. At Neptune, integrity stands as our core principle and ultimate expression — the defining hallmark of who we are.</p>
+                </div>
+            </div>
+
+            <!-- Culture -->
+            <div class="grid-item">
+                <div class="grid-item-content">
+                    <div class="grid-item-icon">🌟</div>
+                    <h3>CULTURE</h3>
+                    <p>We uphold a culture of professionalism and excellence, offering competitive and satisfactory services. Our core competence lies in inspection, verification, testing, and certification, driven by continual improvement and systemization to achieve world-class standards.</p>
+                </div>
+            </div>
+
+            <!-- Futuristic Concepts -->
+            <div class="grid-item">
+                <div class="grid-item-content">
+                    <div class="grid-item-icon">🚀</div>
+                    <h3>FUTURISTIC CONCEPTS</h3>
+                    <p>We embrace advanced, state-of-the-art technology as the standard for our organizational growth and development. Our constant pursuit is to reach the zenith of innovation through continuous improvement, strategic foresight, and adaptive customization.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+           <div class="row justify-content-center text-center vw-100 p-4 d-flex">
+    <div class="col-12 p-md-5 justify-content-center d-flex">
+
+        <div class="row justify-content-center d-flex mt-1">
+            <h1 style="color: darkred;">Our Inspection services</h1>
+            <p class="p-3">We offer a wide range of inspection serivces.</p>
+
+            <div class="col-lg-3 col-sm-6 p-4 text-white">
+                <a href="inspection-services.html#ldw" class="text-white text-center" style="text-decoration: none;">
+                    <div class="container shadow-lg" id style="height: 100%; border-radius: 10px; background: #90D5FF; overflow: hidden;">
+                        <div class="row">
+                            <img class="mt-3 transition-img" src="Resources/container-2018508.jpg" style="height: 200px; width: 100%; object-fit: cover;" alt="">
+                            <h3 class="p-3">Loading, Discharging and Weight Control</h3>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-lg-3 col-sm-6 p-4 text-white">
+                <a href="inspection-services.html#cci" class="text-white text-center" style="text-decoration: none;">
+                    <div class="container shadow-lg" style="height: 100%; border-radius: 10px; background: #57B9FF; overflow: hidden;">
+                        <div class="row">
+                            <img class="mt-3 transition-img" src="Resources/container-inspections.jpg" style="height: 200px; width: 100%; object-fit: cover;" alt="">
+                            <h3 class="p-3">Container Condition Inspections for BQS and ROB</h3>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-lg-3 col-sm-6 p-4 text-white">
+                <a href="inspection-services.html#trace" class="text-white text-center" style="text-decoration: none;">
+                    <div class="container shadow-lg" style="height: 100%; border-radius: 10px; background: #57B9FF; overflow: hidden;">
+                        <div class="row">
+                            <img class="mt-3 transition-img" src="Resources/man-2562325.jpg" style="height: 200px; width: 100%; object-fit: cover;" alt="">
+                            <h3 class="p-3">Traceability</h3>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-lg-3 col-sm-6 p-4 text-white">
+                <a href="inspection-services.html#calib" class="text-white text-center" style="text-decoration: none;">
+                    <div class="container shadow-lg" style="height: 100%; border-radius: 10px; background: #517891; overflow: hidden;">
+                        <div class="row">
+                            <img class="mt-3 transition-img" src="Resources/calibration.jpg" style="height: 200px; width: 100%; object-fit: cover;" alt="">
+                            <h3 class="p-3">Calibration of Tanks and Gauges</h3>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
 
     </div>
 </div>
-
-            <div class="row justify-content-center text-center vw-100 p-4 d-flex">
-                <div class="col-12 p-md-5 justify-content-center d-flex">
-
-                    <div class="row justify-content-center d-flex mt-1">
-                        <h1 style="color: darkred;">Our Inspection services</h1>
-                        <p class="p-3">We offer a wide range of inspection serivces.</p>
-                        <div class="col-lg-3 col-sm-6 p-4 text-white">
-                            <a href="inspection-services.html#ldw" class="text-white text-center" style="text-decoration: none;">
-                                <div class="container shadow-lg card4" id style="height: 100%; border-radius: 10px;">
-                                    <div class="row">
-                                        <img class="mt-3" src="Resources/container-2018508.jpg" style="height: 200px" alt="">
-                                        <h3 class="p-3">Loading, Discharging and Weight Control</h3>
-                                    </div>
-                                </div>
-                            </a>
-
-                        </div>
-                        <div class="col-lg-3 col-sm-6 p-4 text-white ">
-                            <a href="inspection-services.html#cci" class="text-white text-center" style="text-decoration: none;">
-                                <div class="container shadow-lg card5" style="height: 100%; border-radius: 10px;">
-                                    <div class="row">
-                                        <img class="mt-3" src="Resources/container-inspections.jpg" style="height: 200px;" alt="">
-                                        <h3 class="p-3">Container Condition Inspections</h3>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-lg-3 col-sm-6 p-4 text-white">
-                            <a href="inspection-services.html#trace" class="text-white text-center" style="text-decoration: none;">
-                                <div class="container shadow-lg card6" style="height: 100%; border-radius: 10px;">
-                                    <div class="row">
-                                        <img class="mt-3" src="Resources/man-2562325.jpg" style="height:200px" alt="">
-                                        <h3 class="p-3">Traceability</h3>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-lg-3 col-sm-6 p-4 text-white">
-                            <a href="inspection-services.html#calib" class="text-white text-center" style="text-decoration: none;">
-                                <div class="container shadow-lg card7" style="height: 100%; border-radius: 10px;">
-                                    <div class="row">
-                                        <img class="mt-3" src="Resources/calibration.jpg" style="height:200px;position: relative;" alt="">
-                                        <h3 class="p-3">Calibration of Tanks and Gauges</h3>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
+    </div>
+</div>
             <div class="fade-divider"></div>
 
-            <div class="row text-center justify-content-center d-flex" style="background: #f7f7f7;">
-                <div class="col-10 mb-5">
-                    <div class="row justify-content-center d-flex mt-1">
-                        <h1 style="color: darkred;">Our Sector Expertise</h1>
-                        <p class="p-3">We provide a wide array of sector expertise with extensive experience in the respective fields.</p>
-                        <div class="col-lg-4 col-sm-6 p-4">
-                            <a href="sector-expertise.html#Agri" class="text-white text-center mt-5" style="text-decoration: none;">
-                                <div class="container shadow-lg card1" id style="height: 100%; border-radius: 10px;">
-                                    <div class="row">
-                                        <img class="mt-3" src="Resources/hill-5419527.jpg" style="height: 200px;" alt="">
-                                        <h3 class="p-3">Agriculture</h3>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-lg-4 col-sm-6 p-4">
-                            <a href="sector-expertise.html#Minerals" class="text-white text-center mb-1" style="text-decoration: none;">
-                                <div class="container shadow-lg card2" style="height: 100%; border-radius: 10px;">
-                                    <div class="row">
-                                        <img class="mt-3" src="Resources/refinery-3400043.jpg" style="height: 200px;" alt="">
-                                        <h3 class="p-3">Minerals and Petrochemicals</h3>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-lg-4 col-sm-6 p-4 text-white">
-                            <a href="sector-expertise.html#Marine" class="text-white text-center mt-4" style="text-decoration: none;">
-                                <div class="container shadow-lg card3" style="height: 100%; border-radius: 10px;">
-                                    <div class="row">
-                                        <img class="mt-3" src="Resources/Marine%20(2).jpg" style="height: 200px;" alt="">
-                                        <h3 class="p-3">Marine</h3>
-                                    </div>
-                                </div>
-                            </a>
+           <div class="row text-center justify-content-center d-flex" style="background: #f7f7f7;">
+    <div class="col-10 mb-5">
+        <div class="row justify-content-center d-flex mt-1">
+            <h1 style="color: darkred;">Our Sector Expertise</h1>
+            <p class="p-3">We provide a wide array of sector expertise with extensive experience in the respective fields.</p>
+
+            <!-- Card 1 - Agriculture -->
+            <div class="col-lg-4 col-sm-6 p-4">
+                <a href="sector-expertise.html#Agri" class="text-white text-center mt-5" style="text-decoration: none;">
+                    <div class="container shadow-lg" id style="height: 100%; border-radius: 10px; background: #90D5FF; overflow: hidden;">
+                        <div class="row">
+                            <img class="mt-3 transition-img" src="Resources/hill-5419527.jpg" style="height: 200px; width: 100%; object-fit: cover;" alt="">
+                            <h3 class="p-3">Agriculture</h3>
                         </div>
                     </div>
-                </div>
+                </a>
             </div>
+
+            <!-- Card 2 - Minerals & Petrochemicals -->
+            <div class="col-lg-4 col-sm-6 p-4">
+                <a href="sector-expertise.html#Minerals" class="text-white text-center mb-1" style="text-decoration: none;">
+                    <div class="container shadow-lg" id style="height: 100%; border-radius: 10px; background: #57B9FF; overflow: hidden;">
+                        <div class="row">
+                            <img class="mt-3 transition-img" src="Resources/refinery-3400043.jpg" style="height: 200px; width: 100%; object-fit: cover;" alt="">
+                            <h3 class="p-3">Minerals and Petrochemicals</h3>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Card 3 - Marine -->
+            <div class="col-lg-4 col-sm-6 p-4 text-white">
+                <a href="sector-expertise.html#Marine" class="text-white text-center mt-4" style="text-decoration: none;">
+                    <div class="container shadow-lg" id style="height: 100%; border-radius: 10px; background: #517891; overflow: hidden;">
+                        <div class="row">
+                            <img class="mt-3 transition-img" src="Resources/Marine%20(2).jpg" style="height: 200px; width: 100%; object-fit: cover;" alt="">
+                            <h3 class="p-3">Marine</h3>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
 
         </div>
     </div>
 
     <!-- Our Clients Section -->
-<div class="row justify-content-center text-center py-5" style="background: #f1f0f0;">
-    <div class="col-12">
-        <h1 style="color: darkred; margin-bottom: 30px;">Our Clients</h1>
-        <p class="mb-4" style="font-size: 1.2rem; color: #555;">Neptune the hallmark of <strong>reliability</strong> and <strong>professionalism.</strong> Inspection Surveys, Superintendence and Lab Analysis Reports.</p>
-        <p class="mb-4" style="font-size: 1.1rem; color: #666;">The management and the staff of NEPTUNE has had the pleasure and the opportunity of servicing <strong>MNCs- Global Clients and Local Organizations</strong>. Some of them are:</p>
+            <div class="row justify-content-center text-center py-5" style="background: #f1f0f0;">
+                <div class="col-12">
+                    <h1 style="color: darkred; margin-bottom: 30px;">Our Clients</h1>
+                    <p class="mb-4" style="font-size: 1.2rem; color: #555;">Neptune the hallmark of <strong>reliability</strong> and <strong>professionalism.</strong> Inspection Surveys, Superintendence and Lab Analysis Reports.</p>
+                    <p class="mb-4" style="font-size: 1.1rem; color: #666;">The management and the staff of NEPTUNE has had the pleasure and the opportunity of servicing <strong>MNCs- Global Clients and Local Organizations</strong>. Some of them are:</p>
 
-        <!-- Client Type Headers -->
-        <div class="row justify-content-center mb-4">
-            <div class="col-lg-8">
-                <h2 style="color: black; font-size: 2rem;">MARINE / FUEL / BQS / ROB</h2>
-            </div>
-        </div>
+                    <!-- Client Type Headers -->
+                    <div class="row justify-content-center mb-4">
+                        <div class="col-lg-8">
+                            <h2 style="color: black; font-size: 2rem;">MARINE / FUEL / BQS / ROB</h2>
+                        </div>
+                    </div>
 
-        <!-- Scrolling Logos Container -->
-        <div class="logo-scroll-container" style="overflow: hidden; padding: 40px 0; background: linear-gradient(to right, #f8f9fa, #ffffff, #f8f9fa); border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
-            <div class="logo-scroll" style="display: flex; animation: scroll 30s linear infinite; white-space: nowrap;">
-                <!-- First set of logos -->
-                <div class="logo-item" style="display: inline-flex; align-items: center; justify-content: center; min-width: 200px; padding: 20px; margin: 0 30px;">
-                    <img src="Resources/Maersk.jpg" alt="Maersk" style="max-height: 80px; max-width: 180px; object-fit: contain; filter: " >
-                </div>
-                <div class="logo-item" style="display: inline-flex; align-items: center; justify-content: center; min-width: 200px; padding: 20px; margin: 0 30px;">
-                    <img src="Resources/APL.png" alt="APL" style="max-height: 80px; max-width: 180px; object-fit: contain;  ">
-                </div>
-                <div class="logo-item" style="display: inline-flex; align-items: center; justify-content: center; min-width: 200px; padding: 20px; margin: 0 30px;">
-                    <img src="Resources/CMA.png" alt="CMA CGM" style="max-height: 80px; max-width: 180px; object-fit: contain; ">
-                </div>
-                <div class="logo-item" style="display: inline-flex; align-items: center; justify-content: center; min-width: 200px; padding: 20px; margin: 0 30px;">
-                    <img src="Resources/Petro.jpeg" alt="Petro Inspect" style="max-height: 80px; max-width: 180px; object-fit: contain; ">
-                </div>
-                <div class="logo-item" style="display: inline-flex; align-items: center; justify-content: center; min-width: 200px; padding: 20px; margin: 0 30px;">
-                    <img src="Resources/bourbon.png" alt="Bourbon" style="max-height: 80px; max-width: 180px; object-fit: contain; ">
-                </div>
+                    <!-- Scrolling Logos Container -->
+                    <div class="logo-scroll-container" style="overflow: hidden; padding: 40px 0; background: linear-gradient(to right, #f8f9fa, #ffffff, #f8f9fa); border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
+                        <div class="logo-scroll" style="display: flex; animation: scroll 30s linear infinite; white-space: nowrap;">
+                            <!-- First set of logos -->
+                            <div class="logo-item" style="display: inline-flex; align-items: center; justify-content: center; min-width: 200px; padding: 20px; margin: 0 30px;">
+                                <img src="Resources/Maersk.jpg" alt="Maersk" style="max-height: 80px; max-width: 180px; object-fit: contain; filter: " >
+                            </div>
+                            <div class="logo-item" style="display: inline-flex; align-items: center; justify-content: center; min-width: 200px; padding: 20px; margin: 0 30px;">
+                                <img src="Resources/APL.png" alt="APL" style="max-height: 80px; max-width: 180px; object-fit: contain;  ">
+                            </div>
+                            <div class="logo-item" style="display: inline-flex; align-items: center; justify-content: center; min-width: 200px; padding: 20px; margin: 0 30px;">
+                                <img src="Resources/CMA.png" alt="CMA CGM" style="max-height: 80px; max-width: 180px; object-fit: contain; ">
+                            </div>
+                            <div class="logo-item" style="display: inline-flex; align-items: center; justify-content: center; min-width: 200px; padding: 20px; margin: 0 30px;">
+                                <img src="Resources/Petro.jpeg" alt="Petro Inspect" style="max-height: 80px; max-width: 180px; object-fit: contain; ">
+                            </div>
+                            <div class="logo-item" style="display: inline-flex; align-items: center; justify-content: center; min-width: 200px; padding: 20px; margin: 0 30px;">
+                                <img src="Resources/bourbon.png" alt="Bourbon" style="max-height: 80px; max-width: 180px; object-fit: contain; ">
+                            </div>
 
-                <!-- Duplicate set for seamless loop -->
-                <div class="logo-item" style="display: inline-flex; align-items: center; justify-content: center; min-width: 200px; padding: 20px; margin: 0 30px;">
-                    <img src="Resources/Maersk.jpg" alt="Maersk" style="max-height: 80px; max-width: 180px; object-fit: contain;">
-                </div>
-                <div class="logo-item" style="display: inline-flex; align-items: center; justify-content: center; min-width: 200px; padding: 20px; margin: 0 30px;">
-                    <img src="Resources/APL.png" alt="APL" style="max-height: 80px; max-width: 180px; object-fit: contain;">
-                </div>
-                <div class="logo-item" style="display: inline-flex; align-items: center; justify-content: center; min-width: 200px; padding: 20px; margin: 0 30px;">
-                    <img src="Resources/CMA.png" alt="CMA CGM" style="max-height: 80px; max-width: 180px; object-fit: contain; ">
-                </div>
-                <div class="logo-item" style="display: inline-flex; align-items: center; justify-content: center; min-width: 200px; padding: 20px; margin: 0 30px;">
-                    <img src="Resources/Petro.jpeg" alt="Petro Inspect" style="max-height: 80px; max-width: 180px; object-fit: contain; ">
-                </div>
-                <div class="logo-item" style="display: inline-flex; align-items: center; justify-content: center; min-width: 200px; padding: 20px; margin: 0 30px;">
-                    <img src="Resources/bourbon.png" alt="Bourbon" style="max-height: 80px; max-width: 180px; object-fit: contain; ">
-                </div>
-            </div>
-        </div>
-<div class="row justify-content-center mb-4">
-    <div class="col-lg-8">
-        <h2 style="color: black;  font-size: 2rem; margin-top: 35px;">COMMODITIES / ANIMAL FEED</h2>
-    </div>
-</div>
-
-<!-- Commodity Logos Cards -->
-<div class="row justify-content-center mt-4 mb-5">
-    <div class="col-lg-10">
-        <div class="row justify-content-center">
-
-            <!-- Card 1: Goldcoin -->
-            <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
-                <div class="client-card" style="background: white; border-radius: 15px; padding: 30px 20px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); height: 200px; display: flex; align-items: center; justify-content: center; transition: all 0.3s; cursor: pointer;" onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 5px 20px rgba(0,0,0,0.1)';">
-                    <img src="Resources/GOLDCOIN.png" alt="Goldcoin" style="max-width: 100%; max-height: 140px; object-fit: contain;">
+                            <!-- Duplicate set for seamless loop -->
+                            <div class="logo-item" style="display: inline-flex; align-items: center; justify-content: center; min-width: 200px; padding: 20px; margin: 0 30px;">
+                                <img src="Resources/Maersk.jpg" alt="Maersk" style="max-height: 80px; max-width: 180px; object-fit: contain;">
+                            </div>
+                            <div class="logo-item" style="display: inline-flex; align-items: center; justify-content: center; min-width: 200px; padding: 20px; margin: 0 30px;">
+                                <img src="Resources/APL.png" alt="APL" style="max-height: 80px; max-width: 180px; object-fit: contain;">
+                            </div>
+                            <div class="logo-item" style="display: inline-flex; align-items: center; justify-content: center; min-width: 200px; padding: 20px; margin: 0 30px;">
+                                <img src="Resources/CMA.png" alt="CMA CGM" style="max-height: 80px; max-width: 180px; object-fit: contain; ">
+                            </div>
+                            <div class="logo-item" style="display: inline-flex; align-items: center; justify-content: center; min-width: 200px; padding: 20px; margin: 0 30px;">
+                                <img src="Resources/Petro.jpeg" alt="Petro Inspect" style="max-height: 80px; max-width: 180px; object-fit: contain; ">
+                            </div>
+                            <div class="logo-item" style="display: inline-flex; align-items: center; justify-content: center; min-width: 200px; padding: 20px; margin: 0 30px;">
+                                <img src="Resources/bourbon.png" alt="Bourbon" style="max-height: 80px; max-width: 180px; object-fit: contain; ">
+                            </div>
+                        </div>
+                    </div>
+            <div class="row justify-content-center mb-4">
+                <div class="col-lg-8">
+                    <h2 style="color: black;  font-size: 2rem; margin-top: 35px;">COMMODITIES / ANIMAL FEED</h2>
                 </div>
             </div>
 
-            <!-- Card 2: Avi Grain Exports -->
-            <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
-                <div class="client-card" style="background: white; border-radius: 15px; padding: 30px 20px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); height: 200px; display: flex; align-items: center; justify-content: center; transition: all 0.3s; cursor: pointer;" onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 5px 20px rgba(0,0,0,0.1)';">
-                    <img src="Resources/clients/avi-grain-logo.png" alt="Avi Grain Exports" style="max-width: 100%; max-height: 140px; object-fit: contain;">
-                </div>
-            </div>
+            <!-- Commodity Logos Cards -->
+            <div class="row justify-content-center mt-4 mb-5">
+                <div class="col-lg-10">
+                    <div class="row justify-content-center">
 
-            <!-- Card 3: Rathna -->
-            <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
-                <div class="client-card" style="background: white; border-radius: 15px; padding: 30px 20px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); height: 200px; display: flex; align-items: center; justify-content: center; transition: all 0.3s; cursor: pointer;" onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 5px 20px rgba(0,0,0,0.1)';">
-                    <img src="Resources/rathna.jpeg" alt="Rathna" style="max-width: 100%; max-height: 140px; object-fit: contain;">
-                </div>
-            </div>
+                        <!-- Card 1: Goldcoin -->
+                        <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
+                            <div class="client-card" style="background: white; border-radius: 15px; padding: 30px 20px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); height: 200px; display: flex; align-items: center; justify-content: center; transition: all 0.3s; cursor: pointer;" onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 5px 20px rgba(0,0,0,0.1)';">
+                                <img src="Resources/GOLDCOIN.png" alt="Goldcoin" style="max-width: 100%; max-height: 140px; object-fit: contain;">
+                            </div>
+                        </div>
 
-            <!-- Card 4: Serendib -->
-            <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
-                <div class="client-card" style="background: white; border-radius: 15px; padding: 30px 20px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); height: 200px; display: flex; align-items: center; justify-content: center; transition: all 0.3s; cursor: pointer;" onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 5px 20px rgba(0,0,0,0.1)';">
-                    <img src="Resources/clients/serendib-logo.png" alt="Serendib" style="max-width: 100%; max-height: 140px; object-fit: contain;">
-                </div>
-            </div>
+                        <!-- Card 2: Avi Grain Exports -->
+                        <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
+                            <div class="client-card" style="background: white; border-radius: 15px; padding: 30px 20px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); height: 200px; display: flex; align-items: center; justify-content: center; transition: all 0.3s; cursor: pointer;" onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 5px 20px rgba(0,0,0,0.1)';">
+                                <img src="Resources/avi.jpeg" alt="Avi Grain Exports" style="max-width: 100%; max-height: 140px; object-fit: contain;">
+                            </div>
+                        </div>
 
-        </div>
-    </div>
-</div>
+                        <!-- Card 3: Rathna -->
+                        <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
+                            <div class="client-card" style="background: white; border-radius: 15px; padding: 30px 20px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); height: 200px; display: flex; align-items: center; justify-content: center; transition: all 0.3s; cursor: pointer;" onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 5px 20px rgba(0,0,0,0.1)';">
+                                <img src="Resources/rathna.jpeg" alt="Rathna" style="max-width: 100%; max-height: 140px; object-fit: contain;">
+                            </div>
+                        </div>
 
-    </div>
-</div>
+                        <!-- Card 4: Serendib -->
+                        <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
+                            <div class="client-card" style="background: white; border-radius: 15px; padding: 30px 20px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); height: 200px; display: flex; align-items: center; justify-content: center; transition: all 0.3s; cursor: pointer;" onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 5px 20px rgba(0,0,0,0.1)';">
+                                <img src="Resources/serandib.jpeg" alt="Serendib" style="max-width: 100%; max-height: 140px; object-fit: contain;">
+                            </div>
+                        </div>
 
-
-
-  <div class="row justify-content-center text-center py-5" style="background-color: #f7f7f7; padding: 40px 0; ">
-    <div class="col-12">
-        <div class="row">
-            <div class="col-12">
-                <h1 style="color: darkred;">MARINE SURVEYS & CARGO INSPECTIONS</h1>
-                <div id="marqueecontainer" onMouseover="copyspeed=pausespeed" onMouseout="copyspeed=marqueespeed" style="width: 60%; margin: 0 auto; height: 400px; background-color: #fff; overflow: hidden; border: 1px solid #ddd; border-radius: 10px; padding: 10px; position: relative;margin-top: 40px;">
-                    <div id="vmarquee" style="position: absolute; width: 98%; top: 0; text-align: center; ">
-                        <h4>Petroleum / Crude Oil Products</h4>
-                        <h4>Bunker Surveys</h4>
-                        <h4>Draught Surveys</h4>
-                        <h4>Bunker Quantity / ROB Surveys</h4>
-                        <h4>Bunker Fuel Contamination Surveys and Lab Analysis</h4>
-                        <h4>Sludge Surveys</h4>
-                        <h4>Edible Oils</h4>
-                        <h4>Coal</h4>
-                        <h4>Fertilizer / Cement</h4>
-                        <h4>Scrap</h4>
-                        <h4>Apparels / Garments</h4>
-                        <h4>Container Inspections</h4>
-                        <h4>Commodity Inspections</h4>
-                        <h4>Bad Order Cargo / Damage / Condition Surveys</h4>
-                        <h4>Reefer Containers</h4>
-                        <h4>Bulk / Container Vessels</h4>
-                        <h4>Hull & Machinery</h4>
-                        <h4>Agricultural Products</h4>
-                        <h4>Perishable Commodities</h4>
-                        <h4>Sea Air Movement</h4>
-                        <h4>Minerals and Metals</h4>
-                        <h4>Pharmaceuticals</h4>
-                        <h4>Tanktainers / GAS Free Certification</h4>
-                        <h4>Used Machinery Inspections</h4>
-                        <h4>Laboratory Services</h4>
-                        <h4>Factory Supervisions</h4>
-                        <h4>Factory Assessments</h4>
-                        <h4>Factory Stock Quality Control</h4>
                     </div>
                 </div>
             </div>
+
+                </div>
+            </div>
+
+
+
+                  <!-- ==================== 4-COLUMN VERTICAL SCROLLING SERVICES (LIKE TABLE) ==================== -->
+                <div class="row justify-content-center text-center py-5" style="background-color: #f7f7f7; padding: 60px 0;">
+                    <div class="col-12">
+                        <h1 style="color: darkred; margin-bottom: 50px;">MARINE SURVEYS & CARGO INSPECTIONS</h1>
+
+                        <div class="container">
+                            <div class="row">
+
+                                <!-- Fixed Header Row -->
+                <div class="col-12">
+                    <div class="row g-0 mb-5">
+                        <div class="col-3">
+                            <div class="text-center py-4 border-end border-2 border-dark position-relative" style="font-weight: 800; font-size: 1.35rem; letter-spacing: 1px; color: #1a1a1a;">
+                                INSURANCE
+                                <div class="position-absolute bottom-0 start-50 translate-middle-x" style="width: 60px; height: 4px; background: #427fc6; border-radius: 2px;"></div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="text-center py-4 border-end border-2 border-dark position-relative" style="font-weight: 800; font-size: 1.35rem; letter-spacing: 1px; color: #1a1a1a;">
+                                MARINE
+                                <div class="position-absolute bottom-0 start-50 translate-middle-x" style="width: 60px; height: 4px; background: #50bce3; border-radius: 2px;"></div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="text-center py-4 border-end border-2 border-dark position-relative" style="font-weight: 800; font-size: 1.35rem; letter-spacing: 1px; color: #1a1a1a;">
+                                CARGO
+                                <div class="position-absolute bottom-0 start-50 translate-middle-x" style="width: 60px; height: 4px; background: #427fc6; border-radius: 2px;"></div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="text-center py-4 position-relative" style="font-weight: 800; font-size: 1.35rem; letter-spacing: 1px; color: #1a1a1a;">
+                                LAB ANALYSIS
+                                <div class="position-absolute bottom-0 start-50 translate-middle-x" style="width: 60px; height: 4px; background: #50bce3; border-radius: 2px;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4 Scrolling Columns -->
+                <div class="col-3">
+                    <div class="scroll-col" style="height: 420px; overflow: hidden; background: white; border: 1px solid #ddd; border-top: none;">
+                        <div class="scroll-content" style="animation: scrollUp 10s linear infinite; padding: 15px 10px;">
+                            <div class="item">P & I Surveys</div>
+                            <div class="item">Claim Assessments</div>
+                            <div class="item">Claim Management</div>
+                            <div class="item">Loss Assessors</div>
+                            <div class="item">Average Adjusters</div>
+                            <div class="item">Damage / Salvage Cargo</div>
+                            <div class="item">Wreckage</div>
+                            <div class="item">Salvage Cargo Sales</div>
+                            <div class="item">Disposal of Damaged / Salvage Cargo</div>
+                            <div class="item">P & I Surveys</div>
+                            <div class="item">Claim Assessments</div>
+                            <!-- Duplicate for smooth loop -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-3">
+                    <div class="scroll-col" style="height: 420px; overflow: hidden; background: white; border: 1px solid #ddd; border-top: none; border-left: none;">
+                        <div class="scroll-content" style="animation: scrollUp 10s linear infinite; padding: 15px 10px;">
+                            <div class="item">Bunker Surveys / BQS</div>
+                            <div class="item">Draught Surveys</div>
+                            <div class="item">On / Off Hire Surveys</div>
+                            <div class="item">Hold Cleanliness Report</div>
+                            <div class="item">Ship Condition Survey</div>
+                            <div class="item">Tank Tanker Inspection</div>
+                            <div class="item">Hull & Machinery Survey</div>
+                            <div class="item">Project / Heavy lift</div>
+                            <div class="item">Dry Docking Supervision</div>
+                            <div class="item">Sludge Surveys</div>
+                            <div class="item">Crude Oil / Petroleum</div>
+                            <div class="item">Lashing and Supervision</div>
+                            <div class="item">Bunker Surveys / BQS</div>
+                            <!-- Duplicate -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-3">
+                    <div class="scroll-col" style="height: 420px; overflow: hidden; background: white; border: 1px solid #ddd; border-top: none; border-left: none;">
+                        <div class="scroll-content" style="animation: scrollUp 10s linear infinite; padding: 15px 10px;">
+                            <div class="item">Loss/Damage Surveys</div>
+                            <div class="item">Temperature Control</div>
+                            <div class="item">Bulk Liquid Products</div>
+                            <div class="item">Quantity Calibration</div>
+                            <div class="item">Pre-Shipment Inspections</div>
+                            <div class="item">Empty Container Inspection</div>
+                            <div class="item">Loading Supervision</div>
+                            <div class="item">Bagging operations</div>
+                            <div class="item">Container Sealing Witness</div>
+                            <div class="item">Cargo Sampling</div>
+                            <div class="item">Loss/Damage Surveys</div>
+                            <!-- Duplicate -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-3">
+                    <div class="scroll-col" style="height: 420px; overflow: hidden; background: white; border: 1px solid #ddd; border-top: none; border-left: none;">
+                        <div class="scroll-content" style="animation: scrollUp 10s linear infinite; padding: 15px 10px;">
+                            <div class="item">Physical Testing</div>
+                            <div class="item">Chemical Testing</div>
+                            <div class="item">Microbiological Testing</div>
+                            <div class="item">Issuing Test Report</div>
+                            <div class="item">Accredited Laboratory</div>
+                            <div class="item">Verification of Properties</div>
+                            <div class="item">Product Contamination</div>
+                            <div class="item">Food Grade Testing</div>
+                            <div class="item">Physical Testing</div>
+                            <!-- Duplicate -->
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </div>
 </div>
 
-    <div class="row">
-        <div class="col-12">
-            <!DOCTYPE html>
-<html lang="en">
+<!-- CSS Animation for Smooth Scrolling + Pause on Hover -->
 
-<head>
+<!-- ==================== END 4-COLUMN SCROLLING SECTION ==================== -->
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="bootstrap.css">
 
-</head>
+
 
 <!-- Footer -->
 <div class="row">
     <div class="col-12">
-        <div class="row justify-content-center d-flex footer">
-            <div class="col-12 p-4">
+        <div class="row justify-content-center d-flex footer" style="background: linear-gradient(135deg, #1e3c72, #2a5298); color: white;">
+            <div class="col-12 p-5">
 
-                <!-- Tagline Section -->
-                <div class="row text-white text-center mb-4">
+                <!-- Tagline -->
+                <div class="row text-white text-center mb-5">
                     <div class="col-12">
-                        <p class="lead">For Quality, Reliability, Consistency and Availability on the spot basis it's Neptune - 24 x 7 x 365</p>
+                        <p class="lead fw-bold">For Quality, Reliability, Consistency and Availability on the spot basis it's Neptune - 24 x 7 x 365</p>
                     </div>
                 </div>
 
-                <div class="row text-white text-center">
-                    <!-- Address Section -->
-                    <div class="col-lg-6 col-12 mb-4 mb-lg-0">
-                        <h5 class="mb-3">Neptune Inspectorate Lanka (Pte) Ltd</h5>
-                        <p class="mb-2">No. 22-1/2, Shrubbery Gardens,</p>
-                        <p class="mb-2">Colombo 4,</p>
-                        <p>Sri Lanka.</p>
+                <div class="row text-white text-center text-lg-start">
+
+                    <!-- Address -->
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <h5 class="mb-3 fw-bold">Neptune Inspectorate Lanka (Pte) Ltd</h5>
+                        <p class="mb-1">LEVEL 12, CEYLINCO HOUSE,</p>
+                        <p class="mb-1">NO 69 JANADHIPATHI MAWATHA,</p>
+                        <p class="mb-0">COLOMBO 1, SRI LANKA</p>
                     </div>
 
-                    <!-- Contact Information Section -->
-                    <div class="col-lg-6 col-12 text-start">
-                        <div class="row justify-content-start d-flex text-center">
+                    <!-- Contact Info - Perfectly Aligned -->
+                    <div class="col-lg-6">
+                        <div class="row g-3">
 
-                        <!-- Phone Numbers and Fax side by side -->
-                        <div class="col-12">
-                            <div class="row">
-                                <div class="col-lg-6 col-md-6 col-12 mb-2">
-                                    <div class="row">
-                                        <div class="col-4 text-end">
-                                            <h6><i>Phone:</i></h6>
-                                        </div>
-                                        <div class="col-8 text-start">
-                                            <a href="tel:+94115673189" class="text-white text-decoration-none">+94 11 5673189</a><br>
-                                            <a href="tel:+94112554647" class="text-white text-decoration-none">+94 11 2554647</a>
+                            <!-- Hotline & Phone -->
+                            <div class="col-12">
+                                <div class="row align-items-start">
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                        <div class="row">
+                                            <div class="col-5 col-sm-4 text-lg-end text-start">
+                                                <strong>Hotline:</strong>
+                                            </div>
+                                            <div class="col-7 col-sm-8 text-lg-start text-start">
+                                                <a href="tel:+94742652802" class="text-white text-decoration-none">+94 74 265 2802</a><br>
+                                                <a href="tel:+94112554647" class="text-white text-decoration-none">+94 11 2554647</a>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-lg-6 col-md-6 col-12">
-                                    <div class="row">
-                                        <div class="col-4 text-end">
-                                            <h6><i>Fax:</i></h6>
-                                        </div>
-                                        <div class="col-8 text-start">
-                                            <span>+94 11 2503288</span>
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                        <div class="row">
+                                            <div class="col-5 col-sm-4 text-lg-end text-start">
+                                                <strong>Phone:</strong>
+                                            </div>
+                                            <div class="col-7 col-sm-8 text-lg-start text-start">
+                                                +94 11 5732000-10
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
 
-                            <!-- Email -->
-                        <!-- Email Section - Split Left and Right -->
-                        <div class="col-12 mt-2">
-                            <div class="row">
-                                <!-- Left Side Email -->
-                                <div class="col-lg-6 col-md-6 col-12 mb-2">
-                                    <div class="row">
-                                        <div class="col-4 text-end">
-                                            <h6><i>E-mail:</i></h6>
-                                        </div>
-                                        <div class="col-8 text-start">
-                                            <a href="mailto:mgt@Neptunelanka.com" class="text-white text-decoration-none">mgt@Neptunelanka.com</a>
-                                            <a href="mailto:mgt.Neptunelanka@gmail.com" class="text-white text-decoration-none">mgt.Neptunelanka@gmail.com</a>
+                            <!-- E-mail & Web -->
+                            <div class="col-12 mt-3">
+                                <div class="row align-items-start">
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                        <div class="row">
+                                            <div class="col-5 col-sm-4 text-lg-end text-start">
+                                                <strong>E-mail:</strong>
+                                            </div>
+                                            <div class="col-7 col-sm-8 text-lg-start text-start">
+                                                <a href="mailto:contact@neptune-inspect.com" class="text-white text-decoration-none">
+                                                    contact@neptune-inspect.com
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-
-                                <!-- Right Side Emails -->
-                                <div class="col-lg-6 col-md-6 col-12">
-                                    <div class="row">
-                                        <div class="col-12 text-start">
-                                            <a href="mailto:bdm@Neptunelanka.com" class="text-white text-decoration-none">bdm@Neptunelanka.com</a><br>
-
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                        <div class="row">
+                                            <div class="col-5 col-sm-4 text-lg-end text-start">
+                                                <strong>Web:</strong>
+                                            </div>
+                                            <div class="col-7 col-sm-8 text-lg-start text-start">
+                                                <a href="https://www.neptune-inspect.com" class="text-white text-decoration-none" target="_blank">
+                                                    www.neptune-inspect.com
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+
                         </div>
                     </div>
                 </div>
 
-                <!-- Copyright Section -->
-                <div class="row border-top text-white justify-content-center d-flex p-3 mt-4 mb-3 text-center">
-                    &copy; 2025 Neptune Inspectorate Lanka (Pte) Ltd. <br> All Rights Reserved.
+                <!-- Copyright -->
+                <div class="row border-top border-light mt-5 pt-4">
+                    <div class="col-12 text-center">
+                        <p class="mb-0">&copy; 2025 Neptune Inspectorate Lanka (Pte) Ltd. All Rights Reserved.</p>
+                    </div>
                 </div>
+
             </div>
         </div>
     </div>
@@ -627,12 +927,6 @@ if (window.addEventListener) {
 </script>
 
 
-
-    <script src="script.js"></script>
-    <script src="bootstrap.js"></script>
-
 </body>
 
 </html>
-
-
