@@ -8,7 +8,8 @@
 .a2 {
     background: linear-gradient(140deg, rgb(163, 23, 23), rgb(36, 133, 218));
     background-size: contain;
-    background-repeat: no-repeat;
+    background-repeat: no.carousel-left
+    -repeat;
     clip-path: ellipse(140% 100% at top);
 }
 
@@ -109,7 +110,8 @@
 }
 
 .carousel-left{
-       background: linear-gradient(to right, #427fc6, #50bce3);
+           background: linear-gradient(to right, #112868, #39819b);
+}
 
 .u:hover {
     text-decoration: underline;
@@ -317,6 +319,7 @@
   
   
   
+
 
 
 
