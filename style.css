@@ -109,8 +109,7 @@
 }
 
 .carousel-left{
-        background: linear-gradient(100deg, rgb(123 210 204), rgb(11 31 20));
-}
+       background: linear-gradient(to right, #427fc6, #50bce3);
 
 .u:hover {
     text-decoration: underline;
@@ -318,6 +317,7 @@
   
   
   
+
 
 
 
