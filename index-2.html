@@ -81,8 +81,7 @@
         .scroll-col { height: 300px !important; }
         .row > .col-3:nth-child(odd) .scroll-col { border-left: 1px solid #ddd; }
     }
-</style>
-    <style>
+
         * {
             margin: 0;
             padding: 0;
@@ -223,75 +222,71 @@
 
     <div class="row fixed-top">
         <div class="col-12">
-            <!DOCTYPE html>
-<html lang="en">
 
-<head>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="style.css">
-    <link href="../cdn.jsdelivr.net/npm/bootstrap%405.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 
-</head>
+ <div class="row" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">
+    <div class="col-12">
 
-<body>
+        <nav class="navbar navbar-expand-lg" style="background-color: #1e3c72;">
 
-    <div class="row" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">
-        <div class="col-12 ">
+            <!-- Mobile Offcanvas -->
+            <div class="row d-md-block d-lg-none ms-3">
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                    <img src="Resources/toggle.svg" style="height: 28px; filter: brightness(0) invert(1);" alt="Menu">
+                </button>
 
-            <nav class="navbar navbar-expand-lg header justify-content-lg-center d-flex">
+                <div class="offcanvas offcanvas-start text-white" style="background-color: #1e3c72;" id="offcanvasScrolling">
+                    <div class="offcanvas-header border-bottom border-warning">
+                        <h5 class="offcanvas-title text-warning mb-0">Navigation Panel</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+                    </div>
+                    <div class="offcanvas-body text-center pt-3">
+                        <a class="d-block py-2 text-warning fw-bold fs-6 border border-white mx-4 rounded mb-2" href="index-2.html">HOME</a>
+                        <a class="d-block py-2 text-warning fw-bold fs-6 border border-white mx-4 rounded mb-2" href="about-us.html">ABOUT US</a>
+                        <a class="d-block py-2 text-warning fw-bold fs-6 border border-white mx-4 rounded mb-2" href="principles-and-values.html">PRINCIPLES AND VALUES</a>
+                        <a class="d-block py-2 text-warning fw-bold fs-6 border border-white mx-4 rounded mb-2" href="inspection-services.html">INSPECTION SERVICES</a>
+                        <a class="d-block py-2 text-warning fw-bold fs-6 border border-white mx-4 rounded mb-2" href="sector-expertise.html">SECTOR EXPERTISE</a>
+                        <a class="d-block py-2 text-warning fw-bold fs-6 border border-white mx-4 rounded mb-2" href="insurance-surveys.html">INSURANCE</a>
+                        <a class="d-block py-2 text-warning fw-bold fs-6 border border-white mx-4 rounded mb-2" href="lab-reports.html">LAB REPORTS</a>
+                        <a class="d-block py-2 text-warning fw-bold fs-6 border border-white mx-4 rounded mb-2" href="guidlines.html">OUR TEAM</a>
+                    </div>
+                </div>
+            </div>
 
-                <!-- Offcanvas for medium and small screen resolutions -->
-                <div class="row d-md-block d-lg-none ms-3">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
-                        data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
-                        <img src="Resources/toggle.svg" style="height: 30px; color: white;" alt="">
-                    </button>
-                    <div class="offcanvas offcanvas-start header text-white" data-bs-scroll="true"
-                        data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling"
-                        aria-labelledby="offcanvasScrollingLabel">
-                        <div class="row p-4">
-                            <div class="offcanvas-header">
+            <!-- Desktop Menu - Smaller Font -->
+            <div class="container-fluid d-none d-lg-block">
+                <div class="collapse navbar-collapse justify-content-center">
+                    <div class="navbar-nav gap-2">
+                        <a class="nav-link px-3 py-2 text-warning fw-bold fs-6 border border-white"
+                           style="background-color: #1e3c72;" href="index-2.html">HOME</a>
+                        <a class="nav-link px-3 py-2 text-warning fw-bold fs-6 border border-white"
+                           style="background-color: #1e3c72;" href="about-us.html">ABOUT US</a>
+                        <a class="nav-link px-3 py-2 text-warning fw-bold fs-6 border border-white"
+                           style="background-color: #1e3c72;" href="principles-and-values.html">PRINCIPLES AND VALUES</a>
+                        <a class="nav-link px-3 py-2 text-warning fw-bold fs-6 border border-white"
+                           style="background-color: #1e3c72;" href="inspection-services.html">INSPECTION SERVICES</a>
+                        <a class="nav-link px-3 py-2 text-warning fw-bold fs-6 border border-white"
+                           style="background-color: #1e3c72;" href="sector-expertise.html">SECTOR EXPERTISE</a>
+                        <a class="nav-link px-3 py-2 text-warning fw-bold fs-6 border border-white"
+                           style="background-color: #1e3c72;" href="insurance-surveys.html">INSURANCE</a>
+                        <a class="nav-link px-3 py-2 text-warning fw-bold fs-6 border border-white"
+                           style="background-color: #1e3c72;" href="lab-reports.html">LAB REPORTS</a>
+                        <a class="nav-link px-3 py-2 text-warning fw-bold fs-6 border border-white"
+                           style="background-color: #1e3c72;" href="guidlines.html">OUR TEAM</a>
+                    </div>
+                </div>
+            </div>
 
-                                <div class="col-10 justify-content-start d-flex">
-                                    <h4 class="offcanvas-title" id="offcanvasScrollingLabel">Navigation Panel</h4>
-                                </div>
-                                <div class="col-2 justify-content-end d-flex">
-                                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
-                                        aria-label="Close"></button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="offcanvas-body text-center">
-                                    <a class="nav-link text-white mt-3 u" href="index-2.html">HOME</a>
-                                    <a class="nav-link text-white mt-4 u" href="about-us.html">ABOUT US</a>
-                                    <a class="nav-link text-white mt-4 u" href="principles-and-values.html">PRINCIPLES AND VALUES</a>
-                                    <a class="nav-link text-white mt-4 u" href="inspection-services.html">INSPECTION SERVICES</a>
-                                    <a class="nav-link text-white mt-4 u" href="sector-expertise.html">SECTOR EXPERTISE</a>
-                                    <a class="nav-link text-white mt-4 u" href="insurance-surveys.html">INSURANCE </a>
-                                    <a class="nav-link text-white mt-4 u" href="lab-reports.html">LAB REPORTS</a>
-                                    <a class="nav-link text-white mt-4 u" href="guidlines.html">OUR TEAM</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row d-lg-block d-none">
-                            <div class="col-12">
-                                <div class="collapse navbar-collapse text-center" id="navbarNavAltMarkup">
-                                    <div class="navbar-nav mx-auto fw-bold">
-                                        <li class="nav-item u"><a class="nav-link text-black mx-4" href="index-2.html">HOME</a></li>
-                                        <li class="nav-item u"><a class="nav-link text-black mx-4" href="about-us.html">ABOUT US</a></li>
-                                        <li class="nav-item u"><a class="nav-link text-black mx-4" href="principles-and-values.html">PRINCIPLES AND VALUES</a></li>
-                                        <li class="nav-item u"><a class="nav-link text-black mx-4" href="inspection-services.html">INSPECTION SERVICES</a></li>
-                                        <li class="nav-item u"><a class="nav-link text-black mx-4" href="sector-expertise.html">SECTOR EXPERTISE</a></li>
-                                        <li class="nav-item u"><a class="nav-link text-black mx-4" href="insurance-surveys.html">INSURANCE </a></li>
-                                        <li class="nav-item u"><a class="nav-link text-black mx-4" href="lab-reports.html">LAB REPORTS</a></li>
-                                        <li class="nav-item u"><a class="nav-link text-black mx-4" href="guidlines.html">OUR TEAM</a></li>
-                                    </div>
-                            </div>
-                        </div>
+        </nav>
+    </div>
+</div>
 
+                        </nav>
+                    </div>
+                </div>
             </nav>
 
         </div>
