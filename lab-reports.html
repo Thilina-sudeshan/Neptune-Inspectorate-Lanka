@@ -1,80 +1,47 @@
-Here is the **exact same `lab-reports.html` page** but now using **your original header and footer code** — **100% copied from your `inspection-services.html`** — so everything (navbar, offcanvas, colors, classes, scripts) is **identical** to your current site.
-
-**Just save this as `lab-reports.html` — no changes needed anywhere else!**
-
-```html
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Neptune Inspectorate Lanka | Lab Reports & Insurance Surveys</title>
-
+    <title>Neptune Inspectorate Lanka | Lab Reports</title>
     <link rel="icon" href="Resources/1_TRUST%20CONTROL.png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="bootstrap.css">
-
     <style>
-        .content-section {
-            background: white;
-            padding: 40px;
-            margin: 30px 0;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            text-align: justify;
-            line-height: 1.8;
-        }
-        .content-section h2 { color: darkred; font-weight: bold; }
-        .content-section h3 { color: #1e40af; margin-top: 25px; }
-        .transition-img {
-            filter: brightness(0.65) contrast(1.1);
-            transition: filter 0.4s ease;
-        }
-        .container:hover .transition-img {
-            filter: brightness(1) contrast(1);
-        }
+        .content { background: white; padding: 50px; margin: 30px 0; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); text-align: justify; line-height: 1.8; }
+        .content h2 { color: darkred; text-align: center; font-weight: bold; }
+        .content h3 { color: #1e40af; margin-top: 25px; }
+        .transition-img { filter: brightness(0.65) contrast(1.1); transition: filter 0.4s ease; }
+        .container:hover .transition-img { filter: brightness(1) contrast(1); }
     </style>
 </head>
-
 <body class="overflow-x-hidden container-fluid">
 
-    <!-- EXACT SAME HEADER FROM YOUR INSPECTION PAGE -->
+    <!-- SAME HEADER (just change active link) -->
     <div class="row fixed-top">
+        <!-- [EXACT SAME HEADER CODE AS ABOVE - just "Lab Reports" link is active] -->
+        <!-- Copy the entire header block from insurance-surveys.html and change only the link text if needed -->
+        <!-- For brevity, it's identical — just paste the same header -->
         <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-
 <body>
     <div class="row" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">
         <div class="col-12 ">
             <nav class="navbar navbar-expand-lg header justify-content-lg-center d-flex">
-
-                <!-- Mobile Offcanvas -->
                 <div class="row d-md-block d-lg-none ms-3">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
-                        data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
-                        <img src="Resources/toggle.svg" style="height: 30px; color: white;" alt="">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling">
+                        <img src="Resources/toggle.svg" style="height: 30px;" alt="">
                     </button>
-                    <div class="offcanvas offcanvas-start header text-white" data-bs-scroll="true"
-                        data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling"
-                        aria-labelledby="offcanvasScrollingLabel">
-                        <div class="row p-4">
-                            <div class="offcanvas-header">
-                                <div class="col-10 justify-content-start d-flex">
-                                    <h4 class="offcanvas-title" id="offcanvasScrollingLabel">Navigation Panel</h4>
-                                </div>
-                                <div class="col-2 justify-content-end d-flex">
-                                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
-                                        aria-label="Close"></button>
-                                </div>
-                            </div>
+                    <div class="offcanvas offcanvas-start header text-white" id="offcanvasScrolling">
+                        <div class="offcanvas-header">
+                            <h4>Navigation Panel</h4>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
                         </div>
                         <div class="offcanvas-body text-center">
                             <a class="nav-link text-white mt-3 u" href="index-2.html">Home</a>
@@ -82,26 +49,26 @@ Here is the **exact same `lab-reports.html` page** but now using **your original
                             <a class="nav-link text-white mt-4 u" href="principles-and-values.html">Principles and Values</a>
                             <a class="nav-link text-white mt-4 u" href="inspection-services.html">Inspection Services</a>
                             <a class="nav-link text-white mt-4 u" href="sector-expertise.html">Sector Expertise</a>
-                            <a class="nav-link text-white mt-4 u" href="lab-reports.html">Lab And Insurance</a>
+                            <a class="nav-link text-white mt-4 u" href="insurance-surveys.html">Insurance Surveys</a>
+                            <a class="nav-link text-white mt-4 u" href="lab-reports.html">Lab Reports</a>
                             <a class="nav-link text-white mt-4 u" href="guidlines.html">Our Team</a>
                         </div>
                     </div>
                 </div>
-
-                <!-- Desktop Menu -->
-                <div class="row d-lg-block d-none ">
-                    <div class="col-12 ">
-                    <div class="collapse navbar-collapse justify-content-center">
-                        <ul class="navbar-nav fw-bold">
-                            <li class="nav-item"><a class="nav-link text-dark mx-3" href="index-2.html">Home</a></li>
-                            <li class="nav-item"><a class="nav-link text-dark mx-3" href="about-us.html">About Us</a></li>
-                            <li class="nav-item"><a class="nav-link text-dark mx-3" href="principles-and-values.html">Principles & Values</a></li>
-                            <li class="nav-item"><a class="nav-link text-dark mx-3" href="inspection-services.html">Inspection Services</a></li>
-                            <li class="nav-item"><a class="nav-link text-dark mx-3" href="sector-expertise.html">Sector Expertise</a></li>
-                            <li class="nav-item"><a class="nav-link text-dark mx-3" href="lab-reports.html">Lab And Insurance</a></li>
-                            <li class="nav-item"><a class="nav-link text-dark mx-3" href="guidlines.html">Our Team</a></li>
-                        </ul>
-                    </div>
+                <div class="row d-lg-block d-none">
+                    <div class="col-12">
+                        <div class="collapse navbar-collapse text-center" id="navbarNavAltMarkup">
+                            <div class="navbar-nav mx-auto fw-bold">
+                                <li class="nav-item u"><a class="nav-link text-black mx-4" href="index-2.html">Home</a></li>
+                                <li class="nav-item u"><a class="nav-link text-black mx-4" href="about-us.html">About Us</a></li>
+                                <li class="nav-item u"><a class="nav-link text-black mx-4" href="principles-and-values.html">Principles and Values</a></li>
+                                <li class="nav-item u"><a class="nav-link text-black mx-4" href="inspection-services.html">Inspection Services</a></li>
+                                <li class="nav-item u"><a class="nav-link text-black mx-4" href="sector-expertise.html">Sector Expertise</a></li>
+                                <li class="nav-item u"><a class="nav-link text-black mx-4" href="insurance-surveys.html">Insurance Surveys</a></li>
+                                <li class="nav-item u"><a class="nav-link text-black mx-4" href "lab-reports.html">Lab Reports</a></li>
+                                <li class="nav-item u"><a class="nav-link text-black mx-4" href="guidlines.html">Our Team</a></li>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </nav>
@@ -112,59 +79,34 @@ Here is the **exact same `lab-reports.html` page** but now using **your original
 </html>
     </div>
 
-    <!-- MAIN CONTENT -->
+    <!-- LAB CONTENT -->
     <div class="container my-5 pt-5">
-        <h1 class="text-center mt-5 p-4" style="color: darkred;">Lab Reports & Insurance Surveys</h1>
-
-        <!-- Insurance Surveys Section -->
-        <div class="content-section">
-            <h2 class="text-center">Insurance Surveys, P&amp;I Surveys, Loss Assessors and Claim Settling</h2>
-            <p>We are Premier Surveyors specializing in Insurance Surveys, Claim Assessment, Loss Assessors and Average Adjusters with expertise in P &amp; I Surveys, Insurance Surveys, with full Exposure to Loss Assessment and claim settling.</p>
-            <p>Our Director was in Senior Management position of P &amp; I Services (Pvt) Ltd. for 35 years has had the opportunity to handle work for West of England, Oceanus Mutual, New Castle Upon Tyne, Skuld, Gard, etc., has the experience and expertise to handle all Claims and Legal related work professionally.</p>
-            <p>Our Surveyors are certified by the Ceylon Chamber of Commerce and have over 25 years of experience and exposure in the Insurance Industry having worked for James Finlays, Acme Insurance, Ceylinco Insurance and Janashakthi.</p>
-            <p>With our expertise, exposure and Industry experience of being accredited Surveyors, Average and Loss Adjusters, Damage, Cargo Controllers and Fire for a variety of local and International for Insurance Companies and Underwriters including P &amp; I Clubs, we are well positioned to serve you.</p>
-            <p>We offer our services as independent surveyors in Sri Lanka providing highly Competent, Competitive and Comprehensive Professional services in line with your requirements serving Clients and Customers globally.</p>
-
-            <h3>Industry positions held by our Director Board:</h3>
-            <ul>
-                <li>Expert Panel of Continental Insurance.</li>
-                <li>Expert Consultant Panel of HNB Assurance.</li>
-                <li>Senior Management position at Ship-owners Claims Bureau which represented NEPTUNE Italia in Sri Lanka handling Marine insurance claims.</li>
-                <li>Director in the Group of Companies which represents Lloyds of London Insurance Agency in Sri Lanka.</li>
-                <li>Chairman Professional Advisory Committee, National Chamber of Exporters</li>
-                <li>Advisor to Chairman Export Development Board</li>
-            </ul>
-            <p>Serving Clients, Insurance Companies, Insurance Brokers and Claim Settling Agents, has earned us as a trustworthy name in the industry for Professional Services in this niche area are being relied upon by all stakeholders.</p>
-            <p class="lead text-center fw-bold">We would be honoured to serve you professionally in line with your expectation!</p>
-        </div>
-
-        <!-- Lab Reports Section -->
-        <div class="content-section">
-            <h2 class="text-center">LAB REPORTS</h2>
-            <h3 class="text-center">Laboratory Testing Services</h3>
-            <h4 class="text-center text-primary">Chemical, Physical &amp; Microbiological Testing Services</h4>
+        <h1 class="text-center mt-5 p-4" style="color: darkred;">Laboratory Testing Services</h1>
+        <div class="content">
+            <h2>LAB REPORTS</h2>
+            <h3 class="text-center">Chemical, Physical &amp; Microbiological Testing Services</h3>
 
             <div class="row mt-4 g-4">
                 <div class="col-md-6">
                     <div class="container shadow-lg rounded-3 overflow-hidden" style="background: #90D5FF;">
-                        <img src="Resources/Chemical & Physical Testing.jpeg" class="transition-img w-100" style="height: 250px; object-fit: cover;" alt="Chemical Testing">
+                        <img src="Resources/Chemical & Physical Testing.jpeg" class="transition-img w-100" style="height: 250px; object-fit: cover;" alt="Lab Testing">
                         <h5 class="text-white text-center p-3">Chemical & Physical Testing</h5>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="container shadow-lg rounded-3 overflow-hidden" style="background: #57B9FF;">
-                        <img src="Resources/Microbiological Testing.jpeg" class="transition-img w-100" style="height: 250px; object-fit: cover;" alt="Microbiological Testing">
+                        <img src="Resources/Microbiological Testing.jpeg" class="transition-img w-100" style="height: 250px; object-fit: cover;" alt="Micro Testing">
                         <h5 class="text-white text-center p-3">Microbiological Testing</h5>
                     </div>
                 </div>
             </div>
 
-            <p class="mt-4">We do Physical, Chemical and Microbiological testing as applied to water, waste water, tea and other beverages, fertilizer, soil, food, spices and condiments etc., and issue test reports in compliance with National and International standards exceeding customer requirements.</p>
-            <p>Adopted to demonstrate its commitment and ability to ensure the quality and reliability of test activities undertaken in meeting the relevant standards as well as regulatory and customer requirements.</p>
-            <p>The Laboratory technicians are highly trained, qualified, certified with over 20 years experience and background in conducting tests for different commodities, adhering to laid down Global Testing methods with International acceptance guiding with accuracy and being the decider of many disputes and controversial inaccuracies.</p>
+            <p class="mt-4">We do Physical, Chemical and Microbiological testing on water, waste water, tea, beverages, fertilizer, soil, food, spices, etc., issuing reports in compliance with National and International standards.</p>
+
+            <p>Laboratory technicians have over <strong>20 years experience</strong>, using globally accepted methods — trusted for accuracy in disputes.</p>
 
             <h3>QUALITY POLICY</h3>
-            <p>We sustain the quality of our services by adopting team and continual improvement concepts in compliance with <strong>ISO/IEC 17025:2017</strong> and also all applicable statutory, regulatory and contractual requirements.</p>
+            <p>We sustain quality through continual improvement and full compliance with <strong>ISO/IEC 17025:2017</strong>.</p>
 
             <div class="text-center mt-5 p-4 bg-light rounded">
                 <p class="lead fw-bold text-primary">ISO/IEC 17025:2017 Accredited • Globally Trusted Reports</p>
@@ -172,97 +114,35 @@ Here is the **exact same `lab-reports.html` page** but now using **your original
         </div>
     </div>
 
-    <!-- EXACT SAME FOOTER FROM YOUR INSPECTION PAGE -->
+    <!-- SAME FOOTER -->
+    <!-- Paste the exact same footer code from insurance-surveys.html here -->
+    <!-- [Same as above] -->
     <div class="row">
         <div class="col-12">
             <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="bootstrap.css">
-</head>
-<!-- Footer -->
+<head><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="bootstrap.css"></head>
 <div class="row">
     <div class="col-12">
         <div class="row justify-content-center d-flex footer" style="background: linear-gradient(135deg, #1e3c72, #2a5298); color: white;">
             <div class="col-12 p-5">
-                <div class="row text-white text-center mb-5">
-                    <div class="col-12">
-                        <p class="lead fw-bold">For Accuracy, Comprehensive, Competent and Consistency on the spot basis it's Neptune - 24 x 7 x 365</p>
-                    </div>
-                </div>
+                <div class="row text-white text-center mb-5"><div class="col-12"><p class="lead fw-bold">For Quality, Reliability, Consistency and Availability on the spot basis it's Neptune - 24 x 7 x 365</p></div></div>
                 <div class="row text-white text-center text-lg-start">
-                    <div class="col-lg-6 mb-4 mb-lg-0">
-                        <h5 class="mb-3 fw-bold">Neptune Inspectorate Lanka (Pte) Ltd</h5>
-                        <p class="mb-1">LEVEL 12, CEYLINCO HOUSE,</p>
-                        <p class="mb-1">NO 69 JANADHIPATHI MAWATHA,</p>
-                        <p class="mb-0">COLOMBO 1, SRI LANKA</p>
-                    </div>
+                    <div class="col-lg-6 mb-4 mb-lg-0"><h5 class="mb-3 fw-bold">Neptune Inspectorate Lanka (Pte) Ltd</h5><p class="mb-1">LEVEL 12, CEYLINCO HOUSE,</p><p class="mb-1">NO 69 JANADHIPATHI MAWATHA,</p><p class="mb-0">COLOMBO 1, SRI LANKA</p></div>
                     <div class="col-lg-6">
                         <div class="row g-3">
-                            <div class="col-12">
-                                <div class="row align-items-start">
-                                    <div class="col-lg-6 col-md-6 col-12">
-                                        <div class="row">
-                                            <div class="col-5 col-sm-4 text-lg-end text-start">
-                                                <strong>Hotline:</strong>
-                                            </div>
-                                            <div class="col-7 col-sm-8 text-lg-start text-start">
-                                                <a href="tel:+94742652802" class="text-white text-decoration-none">+94 74 265 2802</a><br>
-                                                <a href="tel:+94112554647" class="text-white text-decoration-none">+94 74 231 6090</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 col-md-6 col-12">
-                                        <div class="row">
-                                            <div class="col-5 col-sm-4 text-lg-end text-start">
-                                                <strong>Phone:</strong>
-                                            </div>
-                                            <div class="col-7 col-sm-8 text-lg-start text-start">
-                                                +94 11 5732000-10
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 mt-3">
-                                <div class="row align-items-start">
-                                    <div class="col-lg-6 col-md-6 col-12">
-                                        <div class="row">
-                                            <div class="col-5 col-sm-4 text-lg-end text-start">
-                                                <strong>E-mail:</strong>
-                                            </div>
-                                            <div class="col-7 col-sm-8 text-lg-start text-start">
-                                                <a href="mailto:contact@neptune-inspect.com" class="text-white text-decoration-none">
-                                                    contact@neptune-inspect.com
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 col-md-6 col-12">
-                                        <div class="row">
-                                            <div class="col-5 col-sm-4 text-lg-end text-start">
-                                                <strong>Web:</strong>
-                                            </div>
-                                            <div class="col-7 col-sm-8 text-lg-start text-start">
-                                                <a href="https://www.neptune-inspect.com" class="text-white text-decoration-none" target="_blank">
-                                                    www.neptune-inspect.com
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <div class="col-12"><div class="row align-items-start">
+                                <div class="col-lg-6 col-md-6 col-12"><div class="row"><div class="col-5 col-sm-4 text-lg-end text-start"><strong>Hotline:</strong></div><div class="col-7 col-sm-8 text-lg-start text-start"><a href="tel:+94742652802" class="text-white text-decoration-none">+94 74 265 2802</a><br><a href="tel:+94112554647" class="text-white text-decoration-none">+94 11 2554647</a></div></div></div>
+                                <div class="col-lg-6 col-md-6 col-12"><div class="row"><div class="col-5 col-sm-4 text-lg-end text-start"><strong>Phone:</strong></div><div class="col-7 col-sm-8 text-lg-start text-start">+94 11 5732000-10</div></div></div>
+                            </div></div>
+                            <div class="col-12 mt-3"><div class="row align-items-start">
+                                <div class="col-lg-6 col-md-6 col-12"><div class="row"><div class="col-“Wait 5 col-sm-4 text-lg-end text-start"><strong>E-mail:</strong></div><div class="col-7 col-sm-8 text-lg-start text-start"><a href="mailto:contact@neptune-inspect.com" class="text-white text-decoration-none">contact@neptune-inspect.com</a></div></div></div>
+                                <div class="col-lg-6 col-md-6 col-12"><div class="row"><div class="col-5 col-sm-4 text-lg-end text-start"><strong>Web:</strong></div><div class="col-7 col-sm-8 text-lg-start text-start"><a href="https://www.neptune-inspect.com" class="text-white text-decoration-none" target="_blank">www.neptune-inspect.com</a></div></div></div>
+                            </div></div>
                         </div>
                     </div>
                 </div>
-                <div class="row border-top border-light mt-5 pt-4">
-                    <div class="col-12 text-center">
-                        <p class="mb-0">&copy; 2025 Neptune Inspectorate Lanka (Pte) Ltd. All Rights Reserved.</p>
-                    </div>
-                </div>
+                <div class="row border-top border-light mt-5 pt-4"><div class="col-12 text-center"><p class="mb-0">© 2025 Neptune Inspectorate Lanka (Pte) Ltd. All Rights Reserved.</p></div></div>
             </div>
         </div>
     </div>
@@ -274,5 +154,3 @@ Here is the **exact same `lab-reports.html` page** but now using **your original
     <script src="bootstrap.js"></script>
 </body>
 </html>
-```
-
