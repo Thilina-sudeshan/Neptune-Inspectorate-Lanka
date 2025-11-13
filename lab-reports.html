@@ -8,75 +8,102 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="bootstrap.css">
     <style>
-        .content { background: white; padding: 50px; margin: 30px 0; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); text-align: justify; line-height: 1.8; }
-        .content h2 { color: darkred; text-align: center; font-weight: bold; }
-        .content h3 { color: #1e40af; margin-top: 25px; }
-        .transition-img { filter: brightness(0.65) contrast(1.1); transition: filter 0.4s ease; }
-        .container:hover .transition-img { filter: brightness(1) contrast(1); }
+        /* Light blue background for the entire page */
+        body {
+            background-color: #e6f2ff;
+            background: linear-gradient(to bottom, #f0f8ff, #d6e9ff);
+            min-height: 100vh;
+        }
+
+        .content {
+            background: white;
+            padding: 50px;
+            margin: 30px 0;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: justify;
+            line-height: 1.8;
+        }
+        .content h2 {
+            color: darkred;
+            text-align: center;
+            font-weight: bold;
+        }
+        .content h3 {
+            color: #1e40af;
+            margin-top: 25px;
+        }
+
+        .transition-img {
+            filter: brightness(0.65) contrast(1.1);
+            transition: filter 0.4s ease;
+        }
+        .lab-card:hover .transition-img {
+            filter: brightness(1) contrast(1);
+        }
+
+        .lab-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .lab-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15) !important;
+        }
+
+        .footer {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+        }
     </style>
 </head>
 <body class="overflow-x-hidden container-fluid">
 
-    <!-- Navigation (keeping your existing nav) -->
+    <!-- Navigation -->
     <div class="row fixed-top">
         <div class="col-12">
-<nav class="navbar navbar-expand-lg" style="background-color: #1e3c72;">
+            <nav class="navbar navbar-expand-lg" style="background-color: #1e3c72;">
+                <!-- Mobile Offcanvas -->
+                <div class="row d-md-block d-lg-none ms-3">
+                    <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                        <img src="Resources/toggle.svg" style="height: 28px; filter: brightness(0) invert(1);" alt="Menu">
+                    </button>
 
-            <!-- Mobile Offcanvas -->
-            <div class="row d-md-block d-lg-none ms-3">
-                <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
-                    <img src="Resources/toggle.svg" style="height: 28px; filter: brightness(0) invert(1);" alt="Menu">
-                </button>
-
-                <div class="offcanvas offcanvas-start text-white" style="background-color: #1e3c72;" id="offcanvasScrolling">
-                    <div class="offcanvas-header border-bottom border-warning">
-                        <h5 class="offcanvas-title text-warning mb-0">Navigation Panel</h5>
-                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
-                    </div>
-                    <div class="offcanvas-body text-center pt-3">
-                        <a class="d-block py-2 text-warning fw-bold fs-6 border border-white mx-4 rounded mb-2" href="index-2.html">HOME</a>
-                        <a class="d-block py-2 text-warning fw-bold fs-6 border border-white mx-4 rounded mb-2" href="about-us.html">ABOUT US</a>
-                        <a class="d-block py-2 text-warning fw-bold fs-6 border border-white mx-4 rounded mb-2" href="principles-and-values.html">PRINCIPLES AND VALUES</a>
-                        <a class="d-block py-2 text-warning fw-bold fs-6 border border-white mx-4 rounded mb-2" href="inspection-services.html">INSPECTION SERVICES</a>
-                        <a class="d-block py-2 text-warning fw-bold fs-6 border border-white mx-4 rounded mb-2" href="sector-expertise.html">SECTOR EXPERTISE</a>
-                        <a class="d-block py-2 text-warning fw-bold fs-6 border border-white mx-4 rounded mb-2" href="insurance-surveys.html">INSURANCE</a>
-                        <a class="d-block py-2 text-warning fw-bold fs-6 border border-white mx-4 rounded mb-2" href="lab-reports.html">LAB REPORTS</a>
-                        <a class="d-block py-2 text-warning fw-bold fs-6 border border-white mx-4 rounded mb-2" href="guidlines.html">OUR TEAM</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Desktop Menu - Smaller Font -->
-            <div class="container-fluid d-none d-lg-block">
-                <div class="collapse navbar-collapse justify-content-center">
-                    <div class="navbar-nav gap-2">
-                        <a class="nav-link px-3 py-2 text-warning fw-bold fs-6 border border-white"
-                           style="background-color: #1e3c72;" href="index-2.html">HOME</a>
-                        <a class="nav-link px-3 py-2 text-warning fw-bold fs-6 border border-white"
-                           style="background-color: #1e3c72;" href="about-us.html">ABOUT US</a>
-                        <a class="nav-link px-3 py-2 text-warning fw-bold fs-6 border border-white"
-                           style="background-color: #1e3c72;" href="principles-and-values.html">PRINCIPLES AND VALUES</a>
-                        <a class="nav-link px-3 py-2 text-warning fw-bold fs-6 border border-white"
-                           style="background-color: #1e3c72;" href="inspection-services.html">INSPECTION SERVICES</a>
-                        <a class="nav-link px-3 py-2 text-warning fw-bold fs-6 border border-white"
-                           style="background-color: #1e3c72;" href="sector-expertise.html">SECTOR EXPERTISE</a>
-                        <a class="nav-link px-3 py-2 text-warning fw-bold fs-6 border border-white"
-                           style="background-color: #1e3c72;" href="insurance-surveys.html">INSURANCE</a>
-                        <a class="nav-link px-3 py-2 text-warning fw-bold fs-6 border border-white"
-                           style="background-color: #1e3c72;" href="lab-reports.html">LAB REPORTS</a>
-                        <a class="nav-link px-3 py-2 text-warning fw-bold fs-6 border border-white"
-                           style="background-color: #1e3c72;" href="guidlines.html">OUR TEAM</a>
+                    <div class="offcanvas offcanvas-start text-white" style="background-color: #1e3c72;" id="offcanvasScrolling">
+                        <div class="offcanvas-header border-bottom border-warning">
+                            <h5 class="offcanvas-title text-warning mb-0">Navigation Panel</h5>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+                        </div>
+                        <div class="offcanvas-body text-center pt-3">
+                            <a class="d-block py-2 text-warning fw-bold fs-6 border border-white mx-4 rounded mb-2" href="index-2.html">HOME</a>
+                            <a class="d-block py-2 text-warning fw-bold fs-6 border border-white mx-4 rounded mb-2" href="about-us.html">ABOUT US</a>
+                            <a class="d-block py-2 text-warning fw-bold fs-6 border border-white mx-4 rounded mb-2" href="principles-and-values.html">PRINCIPLES AND VALUES</a>
+                            <a class="d-block py-2 text-warning fw-bold fs-6 border border-white mx-4 rounded mb-2" href="inspection-services.html">INSPECTION SERVICES</a>
+                            <a class="d-block py-2 text-warning fw-bold fs-6 border border-white mx-4 rounded mb-2" href="sector-expertise.html">SECTOR EXPERTISE</a>
+                            <a class="d-block py-2 text-warning fw-bold fs-6 border border-white mx-4 rounded mb-2" href="insurance-surveys.html">INSURANCE</a>
+                            <a class="d-block py-2 text-warning fw-bold fs-6 border border-white mx-4 rounded mb-2" href="lab-reports.html">LAB REPORTS</a>
+                            <a class="d-block py-2 text-warning fw-bold fs-6 border border-white mx-4 rounded mb-2" href="guidlines.html">OUR TEAM</a>
+                        </div>
                     </div>
                 </div>
+
+                <!-- Desktop Menu -->
+                <div class="container-fluid d-none d-lg-block">
+                    <div class="collapse navbar-collapse justify-content-center">
+                        <div class="navbar-nav gap-2">
+                            <a class="nav-link px-3 py-2 text-warning fw-bold fs-6 border border-white" style="background-color: #1e3c72;" href="index-2.html">HOME</a>
+                            <a class="nav-link px-3 py-2 text-warning fw-bold fs-6 border border-white" style="background-color: #1e3c72;" href="about-us.html">ABOUT US</a>
+                            <a class="nav-link px-3 py-2 text-warning fw-bold fs-6 border border-white" style="background-color: #1e3c72;" href="principles-and-values.html">PRINCIPLES AND VALUES</a>
+                            <a class="nav-link px-3 py-2 text-warning fw-bold fs-6 border border-white" style="background-color: #1e3c72;" href="inspection-services.html">INSPECTION SERVICES</a>
+                            <a class="nav-link px-3 py-2 text-warning fw-bold fs-6 border border-white" style="background-color: #1e3c72;" href="sector-expertise.html">SECTOR EXPERTISE</a>
+                            <a class="nav-link px-3 py-2 text-warning fw-bold fs-6 border border-white" style="background-color: #1e3c72;" href="insurance-surveys.html">INSURANCE</a>
+                            <a class="nav-link px-3 py-2 text-warning fw-bold fs-6 border border-white" style="background-color: #1e3c72;" href="lab-reports.html">LAB REPORTS</a>
+                            <a class="nav-link px-3 py-2 text-warning fw-bold fs-6 border border-white" style="background-color: #1e3c72;" href="guidlines.html">OUR TEAM</a>
+                        </div>
                     </div>
                 </div>
             </nav>
         </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
     </div>
 
     <!-- LAB CONTENT -->
@@ -86,70 +113,107 @@
             <h2>LAB REPORTS</h2>
             <h3 class="text-center">Chemical, Physical &amp; Microbiological Testing Services</h3>
 
-            <div class="row mt-4 g-4">
+            <div class="row mt-5 g-5">
                 <div class="col-md-6">
-                    <div class="container shadow-lg rounded-3 overflow-hidden" style="background: #90D5FF;">
-                        <img src="Resources/Chemical & Physical Testing.jpeg" class="transition-img w-100" style="height: 250px; object-fit: cover;" alt="Lab Testing">
-                        <h5 class="text-white text-center p-3">Chemical & Physical Testing</h5>
+                    <div class="lab-card shadow-lg rounded-3 overflow-hidden" style="background: #90D5FF;">
+                        <img src="Resources/Chemical & Physical Testing.jpeg" class="transition-img w-100" style="height: 250px; object-fit: cover;" alt="Chemical & Physical Testing">
+                        <h5 class="text-white text-center p-3 fw-bold">Chemical & Physical Testing</h5>
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="container shadow-lg rounded-3 overflow-hidden" style="background: #57B9FF;">
-                        <img src="Resources/Microbiological Testing.jpeg" class="transition-img w-100" style="height: 250px; object-fit: cover;" alt="Micro Testing">
-                        <h5 class="text-white text-center p-3">Microbiological Testing</h5>
+                    <div class="lab-card shadow-lg rounded-3 overflow-hidden" style="background: #57B9FF;">
+                        <img src="Resources/Microbiological Testing.jpeg" class="transition-img w-100" style="height: 250px; object-fit: cover;" alt="Microbiological Testing">
+                        <h5 class="text-white text-center p-3 fw-bold">Microbiological Testing</h5>
                     </div>
                 </div>
             </div>
 
-            <p class="mt-4">We do Physical, Chemical and Microbiological testing on water, waste water, tea, beverages, fertilizer, soil, food, spices, etc., issuing reports in compliance with National and International standards.</p>
+            <p class="mt-5">We do Physical, Chemical and Microbiological testing on water, waste water, tea, beverages, fertilizer, soil, food, spices, etc., issuing reports in compliance with National and International standards.</p>
 
             <p>Laboratory technicians have over <strong>20 years experience</strong>, using globally accepted methods — trusted for accuracy in disputes.</p>
 
             <h3>QUALITY POLICY</h3>
             <p>We sustain quality through continual improvement and full compliance with <strong>ISO/IEC 17025:2017</strong>.</p>
 
-            <div class="text-center mt-5 p-4 bg-light rounded">
+            <div class="text-center mt-5 p-4 bg-light rounded shadow">
                 <p class="lead fw-bold text-primary">ISO/IEC 17025:2017 Accredited • Globally Trusted Reports</p>
             </div>
         </div>
     </div>
 
-    <!-- SAME FOOTER -->
-    <!-- Paste the exact same footer code from insurance-surveys.html here -->
-    <!-- [Same as above] -->
+    <!-- FOOTER -->
     <div class="row">
         <div class="col-12">
-            <!DOCTYPE html>
-<html lang="en">
-<head><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="bootstrap.css"></head>
-<div class="row">
-    <div class="col-12">
-        <div class="row justify-content-center d-flex footer" style="background: linear-gradient(135deg, #1e3c72, #2a5298); color: white;">
-            <div class="col-12 p-5">
-                <div class="row text-white text-center mb-5"><div class="col-12"><p class="lead fw-bold">For Accuracy, Comprehensive, Competent and Consistency on the spot basis it's Neptune - 24 x 7 x 365</p></div></div>
-                <div class="row text-white text-center text-lg-start">
-                    <div class="col-lg-6 mb-4 mb-lg-0"><h5 class="mb-3 fw-bold">Neptune Inspectorate Lanka (Pte) Ltd</h5><p class="mb-1">LEVEL 12, CEYLINCO HOUSE,</p><p class="mb-1">NO 69 JANADHIPATHI MAWATHA,</p><p class="mb-0">COLOMBO 1, SRI LANKA</p></div>
-                    <div class="col-lg-6">
-                        <div class="row g-3">
-                            <div class="col-12"><div class="row align-items-start">
-                                <div class="col-lg-6 col-md-6 col-12"><div class="row"><div class="col-5 col-sm-4 text-lg-end text-start"><strong>Hotline:</strong></div><div class="col-7 col-sm-8 text-lg-start text-start"><a href="tel:+94742652802" class="text-white text-decoration-none">+94 74 265 2802</a><br><a href="tel:+94112554647" class="text-white text-decoration-none">+94 74 231 6090</a></div></div></div>
-                                <div class="col-lg-6 col-md-6 col-12"><div class="row"><div class="col-5 col-sm-4 text-lg-end text-start"><strong>Phone:</strong></div><div class="col-7 col-sm-8 text-lg-start text-start">+94 11 5732000-10</div></div></div>
-                            </div></div>
-                            <div class="col-12 mt-3"><div class="row align-items-start">
-                                <div class="col-lg-6 col-md-6 col-12"><div class="row"><div class="col-“Wait 5 col-sm-4 text-lg-end text-start"><strong>E-mail:</strong></div><div class="col-7 col-sm-8 text-lg-start text-start"><a href="mailto:contact@neptune-inspect.com" class="text-white text-decoration-none">contact@neptune-inspect.com</a></div></div></div>
-                                <div class="col-lg-6 col-md-6 col-12"><div class="row"><div class="col-5 col-sm-4 text-lg-end text-start"><strong>Web:</strong></div><div class="col-7 col-sm-8 text-lg-start text-start"><a href="https://www.neptune-inspect.com" class="text-white text-decoration-none" target="_blank">www.neptune-inspect.com</a></div></div></div>
-                            </div></div>
+            <div class="row justify-content-center d-flex footer">
+                <div class="col-12 p-5">
+                    <div class="row text-white text-center mb-5">
+                        <div class="col-12">
+                            <p class="lead fw-bold">For Accuracy, Comprehensive, Competent and Consistency on the spot basis it's Neptune - 24 x 7 x 365</p>
+                        </div>
+                    </div>
+                    <div class="row text-white text-center text-lg-start">
+                        <div class="col-lg-6 mb-4 mb-lg-0">
+                            <h5 class="mb-3 fw-bold">Neptune Inspectorate Lanka (Pte) Ltd</h5>
+                            <p class="mb-1">LEVEL 12, CEYLINCO HOUSE,</p>
+                            <p class="mb-1">NO 69 JANADHIPATHI MAWATHA,</p>
+                            <p class="mb-0">COLOMBO 1, SRI LANKA</p>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="row g-3">
+                                <div class="col-12">
+                                    <div class="row align-items-start">
+                                        <div class="col-lg-6 col-md-6 col-12">
+                                            <div class="row">
+                                                <div class="col-5 col-sm-4 text-lg-end text-start"><strong>Hotline:</strong></div>
+                                                <div class="col-7 col-sm-8 text-lg-start text-start">
+                                                    <a href="tel:+94742652802" class="text-white text-decoration-none">+94 74 265 2802</a><br>
+                                                    <a href="tel:+94742316090" class="text-white text-decoration-none">+94 74 231 6090</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-12">
+                                            <div class="row">
+                                                <div class="col-5 col-sm-4 text-lg-end text-start"><strong>Phone:</strong></div>
+                                                <div class="col-7 col-sm-8 text-lg-start text-start">+94 11 5732000-10</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 mt-3">
+                                    <div class="row align-items-start">
+                                        <div class="col-lg-6 col-md-6 col-12">
+                                            <div class="row">
+                                                <div class="col-5 col-sm-4 text-lg-end text-start"><strong>E-mail:</strong></div>
+                                                <div class="col-7 col-sm-8 text-lg-start text-start">
+                                                    <a href="mailto:contact@neptune-inspect.com" class="text-white text-decoration-none">contact@neptune-inspect.com</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-12">
+                                            <div class="row">
+                                                <div class="col-5 col-sm-4 text-lg-end text-start"><strong>Web:</strong></div>
+                                                <div class="col-7 col-sm-8 text-lg-start text-start">
+                                                    <a href="https://www.neptune-inspect.com" class="text-white text-decoration-none" target="_blank">www.neptune-inspect.com</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row border-top border-light mt-5 pt-4">
+                        <div class="col-12 text-center">
+                            <p class="mb-0">© 2025 Neptune Inspectorate Lanka (Pte) Ltd. All Rights Reserved.</p>
                         </div>
                     </div>
                 </div>
-                <div class="row border-top border-light mt-5 pt-4"><div class="col-12 text-center"><p class="mb-0">© 2025 Neptune Inspectorate Lanka (Pte) Ltd. All Rights Reserved.</p></div></div>
             </div>
         </div>
     </div>
-</div>
-        </div>
-    </div>
 
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
     <script src="bootstrap.js"></script>
 </body>
