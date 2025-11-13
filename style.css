@@ -12,6 +12,10 @@
     -repeat;
     clip-path: ellipse(140% 100% at top);
 }
+.logoalign{
+    margin-bottom: 40px;
+    margin-top: 25px;
+}
 
 .b {
     height: 100vh;
