@@ -20,30 +20,24 @@
       /* Targets your section images that use Bootstrap's img-fluid + rounded + shadow */
       .img-fluid.rounded.shadow {
         display: block !important;
-        margin-left: auto !important;
-        margin-right: auto !important;
-        /* Make them all the same visual box, regardless of source size */
-        width: 100% !important;          /* ignore mixed inline 80% widths */
-        max-width: 900px;                 /* keeps them from getting too wide on big screens */
-        aspect-ratio: 16 / 9 !important;  /* consistent height without stretching */
-        height: auto !important;          /* height derived from aspect-ratio */
-        object-fit: cover !important;     /* crop neatly to fill the box */
+        width: 100% !important;
+        max-width: 250px !important;     /* Much smaller max width */
+        height: 180px !important;         /* Fixed smaller height */
+        object-fit: cover !important;
         object-position: center !important;
+        margin: 0 !important;             /* Remove auto centering */
       }
 
       /* Some images in the first Agriculture block don't have the 'rounded shadow' pair.
          Catch-all for images inside your content rows so they centre too, without overreaching site-wide. */
       .row img.img-fluid {
         display: block !important;
-        margin-left: auto !important;
-        margin-right: auto !important;
-        /* If they lack rounded/shadow, still normalise size */
         width: 100% !important;
-        max-width: 900px;
-        aspect-ratio: 16 / 9 !important;
-        height: auto !important;
+        max-width: 250px !important;
+        height: 180px !important;
         object-fit: cover !important;
         object-position: center !important;
+        margin: 0 !important;
       }
 
       /* Optional: keep tiny icons (like the navbar toggle svg) unaffected */
@@ -70,48 +64,62 @@
 
        <div class="row fixed-top">
         <div class="col-12">
-            <nav class="navbar navbar-expand-lg" style="background-color: #ffffff;">
-                <!-- Mobile Offcanvas -->
-                <div class="row d-md-block d-lg-none ms-3">
-                    <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas"
-                        data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
-                        <img src="Resources/toggle.svg" style="height: 28px; filter: brightness(0) invert(1);" alt="Menu">
-                    </button>
+        <nav class="navbar navbar-expand-lg" style="background-color: #ffffff;">
 
-                    <div class="offcanvas offcanvas-start text-white" style="background-color: #1e3c72;" id="offcanvasScrolling">
-                        <div class="offcanvas-header border-bottom border-warning">
-                            <h5 class="offcanvas-title text-warning mb-0">Navigation Panel</h5>
-                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
-                        </div>
-                        <div class="offcanvas-body text-center pt-3">
-                            <a class="d-block py-2 text-warning fw-bold fs-6 border border-white mx-4 rounded mb-2" href="index-2.html">HOME</a>
-                            <a class="d-block py-2 text-warning fw-bold fs-6 border border-white mx-4 rounded mb-2" href="about-us.html">ABOUT US</a>
-<!--                            <a class="d-block py-2 text-warning fw-bold fs-6 border border-white mx-4 rounded mb-2" href="principles-and-values.html">PRINCIPLES AND VALUES</a>-->
-                            <a class="d-block py-2 text-warning fw-bold fs-6 border border-white mx-4 rounded mb-2" href="inspection-services.html">INSPECTION SERVICES</a>
-                            <a class="d-block py-2 text-warning fw-bold fs-6 border border-white mx-4 rounded mb-2" href="sector-expertise.html">SECTOR EXPERTISE</a>
-                            <a class="d-block py-2 text-warning fw-bold fs-6 border border-white mx-4 rounded mb-2" href="insurance-surveys.html">INSURANCE</a>
-                            <a class="d-block py-2 text-warning fw-bold fs-6 border border-white mx-4 rounded mb-2" href="lab-reports.html">LAB REPORTS</a>
-                            <a class="d-block py-2 text-warning fw-bold fs-6 border border-white mx-4 rounded mb-2" href="guidlines.html">OUR TEAM</a>
-                        </div>
+            <!-- Mobile Offcanvas -->
+            <div class="row d-md-block d-lg-none ms-3">
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                    <img src="Resources/toggle.svg" style="height: 28px; filter: brightness(0) invert(1);" alt="Menu">
+                </button>
+
+                <div class="offcanvas offcanvas-start text-white" style="background-color: #ffffff;" id="offcanvasScrolling">
+                    <div class="offcanvas-header border-bottom border-warning">
+                        <h5 class="offcanvas-title text-warning mb-0">Navigation Panel</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+                    </div>
+                    <div class="offcanvas-body text-center pt-3">
+                        <a class="d-block py-2 text-warning fw-bold fs-6 border border-white mx-4 rounded mb-2" href="index-2.html">HOME</a>
+                        <a class="d-block py-2 text-warning fw-bold fs-6 border border-white mx-4 rounded mb-2" href="about-us.html">ABOUT US</a>
+<!--                        <a class="d-block py-2 text-warning fw-bold fs-6 border border-white mx-4 rounded mb-2" href="principles-and-values.html">PRINCIPLES AND VALUES</a>-->
+                        <a class="d-block py-2 text-warning fw-bold fs-6 border border-white mx-4 rounded mb-2" href="inspection-services.html">INSPECTION SERVICES</a>
+                        <a class="d-block py-2 text-warning fw-bold fs-6 border border-white mx-4 rounded mb-2" href="sector-expertise.html">SECTOR EXPERTISE</a>
+                        <a class="d-block py-2 text-warning fw-bold fs-6 border border-white mx-4 rounded mb-2" href="insurance-surveys.html">INSURANCE</a>
+                        <a class="d-block py-2 text-warning fw-bold fs-6 border border-white mx-4 rounded mb-2" href="lab-reports.html">LAB REPORTS</a>
+                        <a class="d-block py-2 text-warning fw-bold fs-6 border border-white mx-4 rounded mb-2" href="guidlines.html">OUR TEAM</a>
+                        <a class="d-block py-2 text-warning fw-bold fs-6 border border-white mx-4 rounded mb-2" href="contact.html">CONTACT </a>
+
                     </div>
                 </div>
+            </div>
 
-                <!-- Desktop Menu -->
-                <div class="container-fluid d-none d-lg-block">
-                    <div class="collapse navbar-collapse justify-content-center">
-                        <div class="navbar-nav gap-2">
-                            <a class="nav-link px-3 py-2 text-warning fw-bold fs-6 border border-white" style="background-color: #1e3c72;" href="index-2.html">HOME</a>
-                            <a class="nav-link px-3 py-2 text-warning fw-bold fs-6 border border-white" style="background-color: #1e3c72;" href="about-us.html">ABOUT US</a>
-<!--                            <a class="nav-link px-3 py-2 text-warning fw-bold fs-6 border border-white" style="background-color: #1e3c72;" href="principles-and-values.html">PRINCIPLES AND VALUES</a>-->
-                            <a class="nav-link px-3 py-2 text-warning fw-bold fs-6 border border-white" style="background-color: #1e3c72;" href="inspection-services.html">INSPECTION SERVICES</a>
-                            <a class="nav-link px-3 py-2 text-warning fw-bold fs-6 border border-white" style="background-color: #1e3c72;" href="sector-expertise.html">SECTOR EXPERTISE</a>
-                            <a class="nav-link px-3 py-2 text-warning fw-bold fs-6 border border-white" style="background-color: #1e3c72;" href="insurance-surveys.html">INSURANCE</a>
-                            <a class="nav-link px-3 py-2 text-warning fw-bold fs-6 border border-white" style="background-color: #1e3c72;" href="lab-reports.html">LAB REPORTS</a>
-                            <a class="nav-link px-3 py-2 text-warning fw-bold fs-6 border border-white" style="background-color: #1e3c72;" href="guidlines.html">OUR TEAM</a>
-                        </div>
+            <!-- Desktop Menu - Smaller Font -->
+            <div class="container-fluid d-none d-lg-block">
+                <div class="collapse navbar-collapse justify-content-center">
+                    <div class="navbar-nav gap-2">
+                        <a class="nav-link px-3 py-2 text-warning fw-bold fs-6 border border-white"
+                           style="background-color: #87CEEB;" href="index-2.html">HOME</a>
+                        <a class="nav-link px-3 py-2 text-warning fw-bold fs-6 border border-white"
+                           style="background-color: #87CEEB;" href="about-us.html">ABOUT US</a>
+<!--                        <a class="nav-link px-3 py-2 text-warning fw-bold fs-6 border border-white"-->
+<!--                           style="background-color: #1e3c72;" href="principles-and-values.html">PRINCIPLES AND VALUES</a>-->
+                        <a class="nav-link px-3 py-2 text-warning fw-bold fs-6 border border-white"
+                           style="background-color: #87CEEB;" href="inspection-services.html">INSPECTION SERVICES</a>
+                        <a class="nav-link px-3 py-2 text-warning fw-bold fs-6 border border-white"
+                           style="background-color: #87CEEB;" href="sector-expertise.html">SECTOR EXPERTISE</a>
+                        <a class="nav-link px-3 py-2 text-warning fw-bold fs-6 border border-white"
+                           style="background-color: #87CEEB;" href="insurance-surveys.html">INSURANCE</a>
+                        <a class="nav-link px-3 py-2 text-warning fw-bold fs-6 border border-white"
+                           style="background-color: #87CEEB;" href="lab-reports.html">LAB REPORTS</a>
+                        <a class="nav-link px-3 py-2 text-warning fw-bold fs-6 border border-white"
+                           style="background-color: #87CEEB;" href="guidlines.html">OUR TEAM</a>
+                        <a class="nav-link px-3 py-2 text-warning fw-bold fs-6 border border-white"
+                           style="background-color: #87CEEB;" href="contact.html">CONTACT </a>
                     </div>
                 </div>
-            </nav>
+            </div>
+
+        </nav>
         </div>
     </div>
 
@@ -124,7 +132,7 @@
        </div>
     </div>
 
-    <div class="row skewed justify-content-center d-flex" id="Agri" style="background: rgb(63 196 255 / 50%);">
+    <div class="row skewed justify-content-center d-flex" id="Agri">
         <h1 class="text-center fade-in ms-5" id="image1">Our Sector Expertise</h1>
 
 
@@ -149,7 +157,7 @@
         <div class="row">
 
             <!-- LEFT COLUMN: Title + Description (top) + Image (bottom) -->
-            <div class="col-lg-6 col-12">
+            <div class="col-lg-6 col-12" id="Minerals   ">
 
                 <!-- Title + Description (top) -->
                 <h3 style="color: #d32f2f; font-weight: bold; margin-bottom: 20px;">
@@ -253,7 +261,7 @@ Our inspection services maximize control at every critical point in the supply c
             </div>
 
             <!-- RIGHT COLUMN: Both Service Lists -->
-            <div class="col-lg-6 col-12 mt-lg-0 mt-4">
+            <div class="col-lg-6 col-12 mt-lg-0 mt-4" id="Minerals">
 
                 <!-- Minerals Services -->
                 <h4 style="color: #333; margin-bottom: 15px;"><i>Minerals Services:</i></h4>
@@ -289,7 +297,7 @@ Our inspection services maximize control at every critical point in the supply c
 </div>
 
         <!-- PETROLEUM Section -->
-        <div class="row mb-5 align-items-center" style="background: #f8f9fa;  border-radius: 15px;">
+        <div class="row mb-5 align-items-center" style="background: #f8f9fa;  border-radius: 15px;" id="Marine">
             <div class="col-lg-6 col-12 mb-3 mb-lg-0">
                 <img src="Resources/Marine 6..jpg" alt="Factory Assessment" class="img-fluid rounded shadow" style="width: 80%; max-height: 300px; object-fit: cover;">
             </div>
@@ -308,7 +316,7 @@ Our inspection services maximize control at every critical point in the supply c
         </div>
 
         <div class="row mb-5 align-items-center">
-            <div class="col-lg-6 col-12 mb-3 mb-lg-0">
+            <div class="col-lg-6 col-12 mb-3 mb-lg-0" id="petrolium">
                 <img src="Resources/CRUDE OIL.jpeg" alt="Petroleum" class="img-fluid rounded shadow" style="width: 80%; max-height: 300px; object-fit: cover;">
             </div>
             <div class="col-lg-6 col-12">
@@ -321,11 +329,11 @@ Our inspection services maximize control at every critical point in the supply c
         </div>
 
         <!-- BUNKERING Section -->
-        <div class="row mb-5 align-items-center" style="background: #f8f9fa; border-radius: 15px;">
+        <div class="row mb-5 align-items-center" style="background: #f8f9fa; border-radius: 15px;" >
             <div class="col-lg-6 col-12 mb-3 mb-lg-0">
                 <img src="Resources/BUNKERING.jpeg" alt="Bunkering" class="img-fluid rounded shadow" style="width: 80%; max-height: 300px; object-fit: cover;">
             </div>
-            <div class="col-lg-6 col-12">
+            <div class="col-lg-6 col-12" id="BUNKERING">
                 <h3 style="color: #d32f2f; font-weight: bold; margin-bottom: 20px;">BUNKERING</h3>
                 <p style="text-align: justify; line-height: 1.8;">
                     Neptune offers in port and outer anchorage Bunker Surveys in Colombo. We cover the Galle port and Trincomalee ports as well as at the emerging Port and Newest hub of Maritime Traffic Hambantota. We offer 24 x 7 x 365 days availability.
@@ -341,7 +349,7 @@ Our inspection services maximize control at every critical point in the supply c
             <div class="col-lg-6 col-12 mb-3 mb-lg-0">
                 <img src="Resources/CONTAINER INSPECTION.jpeg" alt="Container Inspection" class="img-fluid rounded shadow" style="width: 80%; max-height: 300px; object-fit: cover;">
             </div>
-            <div class="col-lg-6 col-12">
+            <div class="col-lg-6 col-12" id="containe">
                 <h3 style="color: #d32f2f; font-weight: bold; margin-bottom: 20px;">CONTAINER INSPECTION</h3>
                 <p style="text-align: justify; line-height: 1.8;">
                     Surveying Brand New and Second Hand Containers – GPs/HCs, Flat Racks, Open Tops, Reefers machinery PSI standardization, Flexi Tanks, Tanktainers inspections, Gas Free certification and end to end solution for container handling and equipment.
@@ -358,7 +366,7 @@ Our inspection services maximize control at every critical point in the supply c
             <div class="col-lg-6 col-12 mb-3 mb-lg-0">
                 <img src="Resources/bulck.jpg" alt="Bulk Commodities" class="img-fluid rounded shadow" style="width: 80%; max-height: 300px; object-fit: cover;">
             </div>
-            <div class="col-lg-6 col-12">
+            <div class="col-lg-6 col-12" id="bulk">
                 <h3 style="color: #d32f2f; font-weight: bold; margin-bottom: 20px;">BULK COMMODITIES</h3>
                 <p style="text-align: justify; line-height: 1.8;">
                     Reducing Commodity Cargo Trading Risk around the world through independent inspection and testing services. We help protect high value bulk commodity cargos, significantly reducing of loss exposure to the trading parties involved. Inspection occurs during critical transportation, custody transfer and storage operations.
@@ -369,7 +377,7 @@ Our inspection services maximize control at every critical point in the supply c
         <!-- TEA Section -->
         <div class="row mb-5 align-items-center">
             <div class="col-lg-6 col-12 mb-3 mb-lg-0">
-                <div class="row g-2">
+                <div class="row g-2" id="TEA">
                     <div class="col-6">
                         <img src="Resources/tea1.jpg" alt="Tea" class="img-fluid rounded shadow" style="width: 100%; height: 300px; object-fit: cover;">
                     </div>
@@ -394,7 +402,7 @@ Our inspection services maximize control at every critical point in the supply c
             <div class="col-lg-6 col-12 mb-3 mb-lg-0">
                 <img src="Resources/agriculture.jpg" alt="Agricultural Products" class="img-fluid rounded shadow" style="width: 80%; max-height: 300px; object-fit: cover;">
             </div>
-            <div class="col-lg-6 col-12">
+            <div class="col-lg-6 col-12" id="agri">
                 <h3 style="color: #d32f2f; font-weight: bold; margin-bottom: 20px;">AGRICULTURAL PRODUCTS</h3>
                 <p style="text-align: justify; line-height: 1.8;">
                     Wheat Flour, Rice, Grains, Lentils, Sugar and other agricultural commodities are included in our inspection spectrum which offers a full range of services.
@@ -407,7 +415,7 @@ Our inspection services maximize control at every critical point in the supply c
             <div class="col-lg-6 col-12 mb-3 mb-lg-0">
                 <img src="Resources/Perishables----.png" alt="Perishable Products" class="img-fluid rounded shadow" style="width: 80%; max-height: 300px; object-fit: cover;">
             </div>
-            <div class="col-lg-6 col-12">
+            <div class="col-lg-6 col-12" id="peri">
                 <h3 style="color: #d32f2f; font-weight: bold; margin-bottom: 20px;">PERISHABLE PRODUCTS</h3>
                 <p style="text-align: justify; line-height: 1.8;">
                     Fish, Crab, Lobsters, Exotic Spices, Fruits and Vegetables including inspection and attendance, monitoring and temperature at farm gate / production level, Acceptance and Standardization of Bio Organic and environmentally acceptable growing Standard Certification.
@@ -421,7 +429,7 @@ Our inspection services maximize control at every critical point in the supply c
             <div class="col-lg-6 col-12 mb-3 mb-lg-0">
                 <img src="Resources/oill.jpg" alt="Edible Oils" class="img-fluid rounded shadow" style="width: 80%; max-height: 300px; object-fit: cover;">
             </div>
-            <div class="col-lg-6 col-12">
+            <div class="col-lg-6 col-12" id="oil">
                 <h3 style="color: #d32f2f; font-weight: bold; margin-bottom: 20px;">EDIBLE OILS</h3>
                 <p style="text-align: justify; line-height: 1.8;">
                     Palm Oil, Coconut Oil, Corn / Sun flower and other Edible Oils, Oil Products and Extracts.
@@ -437,7 +445,7 @@ Our inspection services maximize control at every critical point in the supply c
             <div class="col-lg-6 col-12 mb-3 mb-lg-0">
                 <img src="Resources/Coal.png" alt="Coal" class="img-fluid rounded shadow" style="width: 80%; max-height: 300px; object-fit: cover;">
             </div>
-            <div class="col-lg-6 col-12">
+            <div class="col-lg-6 col-12" id="coal">
                 <h3 style="color: #d32f2f; font-weight: bold; margin-bottom: 20px;">COAL</h3>
                 <p style="text-align: justify; line-height: 1.8;">
                     Coal discharging vessel inspections, draft surveys, safety controls, quality analysis, storage facility inspections, approvals and unloading calibrations for power plants generating electricity.
@@ -450,7 +458,7 @@ Our inspection services maximize control at every critical point in the supply c
         <div class="row mb-5 align-items-center" style="background: #f8f9fa;  border-radius: 15px;">
 
             <div class="col-lg-6 col-12 mb-3 mb-lg-0">
-                <div class="row g-2">
+                <div class="row g-2" id="ferti">
                     <div class="col-6">
                         <img src="Resources/cement.jpg" alt="Tea" class="img-fluid rounded shadow" style="width: 100%; height: 300px; object-fit: cover;">
                     </div>
@@ -475,7 +483,7 @@ Our inspection services maximize control at every critical point in the supply c
             <div class="col-lg-6 col-12 mb-3 mb-lg-0">
                 <img src="Resources/Metal.png" alt="Scrap" class="img-fluid rounded shadow" style="width: 80%; max-height: 300px; object-fit: cover;">
             </div>
-            <div class="col-lg-6 col-12">
+            <div class="col-lg-6 col-12" id="scrap">
                 <h3 style="color: #d32f2f; font-weight: bold; margin-bottom: 20px;">SCRAP</h3>
                 <p style="text-align: justify; line-height: 1.8;">
                     Metal scrap, Plastic scrap, Paper scrap both import and export surveys and certification. Sizes, segregation machinery supervisions of scrap imported for recycling and / or cutting into customized sizes for re-export markets.
@@ -489,7 +497,7 @@ Our inspection services maximize control at every critical point in the supply c
             <div class="col-lg-6 col-12 mb-3 mb-lg-0">
                 <img src="Resources/apperal.jpg" alt="Apparels" class="img-fluid rounded shadow" style="width: 80%; max-height: 300px; object-fit: cover;">
             </div>
-            <div class="col-lg-6 col-12">
+            <div class="col-lg-6 col-12" id="apparels">
                 <h3 style="color: #d32f2f; font-weight: bold; margin-bottom: 20px;">APPARELS</h3>
                 <p style="text-align: justify; line-height: 1.8;">
                     Textiles, home textiles, made ups including factory supervisions, standardization, quality control, merchandising over view, quality assortment, packing, laboratory and technical facilities to meet fabric quality / cloth construction requirements, garment packing and garment on hangers, Factory Audit Inspection / Buyer Consolidation Inspections- Customs Bond / Inventory Control Inspections / Measurement Certifications, Packing Material Inventory Control.
@@ -502,7 +510,7 @@ Our inspection services maximize control at every critical point in the supply c
             <div class="col-lg-6 col-12 mb-3 mb-lg-0">
                 <img src="Resources/CONDITION SURVEYS.jpeg" alt="Bad Order Cargo" class="img-fluid rounded shadow" style="width: 80%; max-height: 300px; object-fit: cover;">
             </div>
-            <div class="col-lg-6 col-12">
+            <div class="col-lg-6 col-12" id="bad">
                 <h3 style="color: #d32f2f; font-weight: bold; margin-bottom: 20px;">BAD ORDER CARGO / DAMAGE / CONDITION SURVEYS</h3>
                 <p style="text-align: justify; line-height: 1.8;">
                     Neptune has wharf inspection team providing round the clock inspections reviews for bad order cargo discharge experts for Imports and transshipment, MCC traffic. Comprehensive Reports with photographs supporting tally reports giving shipments, cargo interest, insurance by assessors, value added accurate services. NEPTUNE is on the panel of leading supplying and insurance companies.
@@ -516,7 +524,7 @@ Our inspection services maximize control at every critical point in the supply c
             <div class="col-lg-6 col-12 mb-3 mb-lg-0">
                 <img src="Resources/REEFER CONTAINERS.jpeg" alt="Reefer Containers" class="img-fluid rounded shadow" style="width: 80%; max-height: 300px; object-fit: cover;">
             </div>
-            <div class="col-lg-6 col-12">
+            <div class="col-lg-6 col-12" id="refer">
                 <h3 style="color: #d32f2f; font-weight: bold; margin-bottom: 20px;">REEFER CONTAINERS</h3>
                 <p style="text-align: justify; line-height: 1.8;">
                     PSI – Plugging - Chart Monitoring in Port premises on the basis 24/7 at port Terminal/ Off dock terminal – temperature control / monitoring including inspection @ loading point for packing proper storage, stuffing. Supervising of cloys movement in full reefer vessels.
@@ -529,7 +537,7 @@ Our inspection services maximize control at every critical point in the supply c
             <div class="col-lg-6 col-12 mb-3 mb-lg-0">
                 <img src="Resources/BulkContainer.png" alt="Bulk Vessels" class="img-fluid rounded shadow" style="width: 80%; max-height: 300px; object-fit: cover;">
             </div>
-            <div class="col-lg-6 col-12">
+            <div class="col-lg-6 col-12" id="bulk">
                 <h3 style="color: #d32f2f; font-weight: bold; margin-bottom: 20px;">BULK / CONTAINER VESSELS</h3>
                 <p style="text-align: justify; line-height: 1.8;">
                     Handling Bulk, Break Bulk vessel inspection, supervision, break bulk to terminals, discharge reports, supervision of statement of facts, terminal reports, inspection of storage facilities, loading / stacking and tallying services.
@@ -543,7 +551,7 @@ Our inspection services maximize control at every critical point in the supply c
             <div class="col-lg-6 col-12 mb-3 mb-lg-0">
                 <img src="Resources/SEA AIR.jpeg" alt="Sea Air" class="img-fluid rounded shadow" style="width: 80%; max-height: 300px; object-fit: cover;">
             </div>
-            <div class="col-lg-6 col-12">
+            <div class="col-lg-6 col-12" id="sea">
                 <h3 style="color: #d32f2f; font-weight: bold; margin-bottom: 20px;">SEA AIR</h3>
                 <p style="text-align: justify; line-height: 1.8;">
                     Sea-Air / Air-Sea, Multi Country Consolidation and transshipment cargo supervision in port, Distri-parks with supervision to ensure quantity declared, quality loaded, damage control attendance specially permitted by the Sri Lanka Ports Authority to handle in Port and Distri-parks Terminals.
@@ -556,7 +564,7 @@ Our inspection services maximize control at every critical point in the supply c
             <div class="col-lg-6 col-12 mb-3 mb-lg-0">
                 <img src="Resources/Hull.png" alt="Hull & Machinery" class="img-fluid rounded shadow" style="width: 80%; max-height: 300px; object-fit: cover;">
             </div>
-            <div class="col-lg-6 col-12">
+            <div class="col-lg-6 col-12" id="hull">
                 <h3 style="color: #d32f2f; font-weight: bold; margin-bottom: 20px;">HULL & MACHINERY</h3>
                 <p style="text-align: justify; line-height: 1.8;">
                     Handling, Discharging, Sampling laboratory analysis of Crude Oil, Petroleum Products, HSD Gas Oil Jet Fuel, Kerosene, Naptha Fuel Oil, Lube Oil, Base Oil, Pre-shipment tank calibration, ullage report and tank cleanliness certifications. We attend on behalf of all majors and independents.
@@ -570,7 +578,7 @@ Our inspection services maximize control at every critical point in the supply c
             <div class="col-lg-6 col-12 mb-3 mb-lg-0">
                 <img src="Resources/Pharmaceutical.jpg" alt="Pharmaceuticals" class="img-fluid rounded shadow" style="width: 80%; max-height: 300px; object-fit: cover;">
             </div>
-            <div class="col-lg-6 col-12">
+            <div class="col-lg-6 col-12" id="pharma">
                 <h3 style="color: #d32f2f; font-weight: bold; margin-bottom: 20px;">PHARMACEUTICALS</h3>
                 <p style="text-align: justify; line-height: 1.8;">
                     Neptune specialized in the Pharmaceutical industry with Pre-shipment at load port, Post shipment inspection in Sri Lanka for product certification and verification for multinational and regional pharmaceutical companies and laboratories including globally acclaimed brand names. NEPTUNE had qualified pharmacists on its panel to be able to render a value added and totally dedicated service.
@@ -584,7 +592,7 @@ Our inspection services maximize control at every critical point in the supply c
             <div class="col-lg-6 col-12 mb-3 mb-lg-0">
                 <img src="Resources/tank0.jpeg" alt="Tanktainers" class="img-fluid rounded shadow" style="width: 80%; max-height: 300px; object-fit: cover;">
             </div>
-            <div class="col-lg-6 col-12">
+            <div class="col-lg-6 col-12" id="tanker">
                 <h3 style="color: #d32f2f; font-weight: bold; margin-bottom: 20px;">TANKTAINERS / GAS FREE CERTIFICATION</h3>
                 <p style="text-align: justify; line-height: 1.8;">
                     With the increase in liquid cargo movement Tanktainers / Flexitonln. NEPTUNE covers this area of precision by offering a total solution for tanktainer handling / supervision certification for any residue in the tanktainers / flexitanks. Issuing of quality certificate is accepted by Sri Lankan Ports Authority and Carriers for Empty Tank Repositioning.
@@ -597,7 +605,7 @@ Our inspection services maximize control at every critical point in the supply c
             <div class="col-lg-6 col-12 mb-3 mb-lg-0">
                 <img src="Resources/Used Machinery Inspection.png" alt="Used Machinery" class="img-fluid rounded shadow" style="width: 80%; max-height: 300px; object-fit: cover;">
             </div>
-            <div class="col-lg-6 col-12">
+            <div class="col-lg-6 col-12" id="used">
                 <h3 style="color: #d32f2f; font-weight: bold; margin-bottom: 20px;">USED MACHINERY INSPECTION</h3>
                 <p style="text-align: justify; line-height: 1.8;">
                     Our services not only include appraisal, we can likewise control and make sure that your equipment complies with the required directives and standards in the country on re-installation. With the worldwide network of Neptune inspectors and laboratories, inspectors and tests for any foreign country before purchasing the equipment is made possible.
@@ -612,7 +620,7 @@ Our inspection services maximize control at every critical point in the supply c
             <div class="col-lg-6 col-12 mb-3 mb-lg-0">
                 <img src="Resources/Factory Supervision.png" alt="Factory Supervision" class="img-fluid rounded shadow" style="width: 80%; max-height: 300px; object-fit: cover;">
             </div>
-            <div class="col-lg-6 col-12">
+            <div class="col-lg-6 col-12" id="factore">
                 <h3 style="color: #d32f2f; font-weight: bold; margin-bottom: 20px;">FACTORY SUPERVISIONS</h3>
                 <p style="text-align: justify; line-height: 1.8;">
                     Neptune has a team of inspectors who specialize in factory production, supervision, labeling in accordance to assortment from the initiated stage of gathering raw materials up to the stage of production.
@@ -626,7 +634,7 @@ Our inspection services maximize control at every critical point in the supply c
             <div class="col-lg-6 col-12 mb-3 mb-lg-0">
                 <img src="Resources/Factory Assessment.png" alt="Factory Assessment" class="img-fluid rounded shadow" style="width: 100%; max-height: 300px; object-fit: cover;">
             </div>
-            <div class="col-lg-6 col-12">
+            <div class="col-lg-6 col-12" id="assegment">
                 <h3 style="color: #d32f2f; font-weight: bold; margin-bottom: 20px;">FACTORY ASSESSMENTS</h3>
                 <p style="text-align: justify; line-height: 1.8;">
                     A factory assessment audits the production capacity and performance of a factory against proven quality principles. Core areas and processes addressed include:
@@ -647,7 +655,7 @@ Our inspection services maximize control at every critical point in the supply c
             <div class="col-lg-6 col-12 mb-3 mb-lg-0">
                 <img src="Resources/Factor.png" alt="Stock Quality Control" class="img-fluid rounded shadow" style="width: 100%; max-height: 300px; object-fit: cover;">
             </div>
-            <div class="col-lg-6 col-12">
+            <div class="col-lg-6 col-12" id="stok">
                 <h3 style="color: #d32f2f; font-weight: bold; margin-bottom: 20px;">FACTORY STOCK QUALITY CONTROL</h3>
                 <p style="text-align: justify; line-height: 1.8;">
                     Quality control is vital aspect of stock control – especially as it may affect the safety of the customers or the quality of the finished product. Efficient stock control should incorporate stock tracking and batch tracking. This means being able to trace a particular item backwards or forwards from source to finished product, and identifying the other items in the batch. Radio Frequency Identification (RFID) can be used to store the information about a products or component's manufacturing date, to ensure that it is sold or processed in time.
@@ -664,7 +672,7 @@ Our inspection services maximize control at every critical point in the supply c
 <!-- Footer -->
 <div class="row">
     <div class="col-12">
-        <div class="row justify-content-center d-flex footer" style="background: linear-gradient(135deg, #1e3c72, #2a5298); color: white;">
+        <div class="row justify-content-center d-flex footer" style="background: ##478ab3; color: #609fcc;">
             <div class="col-12 p-5">
 
                 <!-- Tagline -->
@@ -677,12 +685,14 @@ Our inspection services maximize control at every critical point in the supply c
                 <div class="row text-white text-center text-lg-start">
 
                     <!-- Address -->
-                    <div class="col-lg-6 mb-4 mb-lg-0">
-                        <h5 class="mb-3 fw-bold">Neptune Inspectorate Lanka (Pte) Ltd</h5>
-                        <p class="mb-1">LEVEL 12, CEYLINCO HOUSE,</p>
-                        <p class="mb-1">NO 69 JANADHIPATHI MAWATHA,</p>
-                        <p class="mb-0">COLOMBO 1, SRI LANKA</p>
-                    </div>
+                        <div class="col-lg-6 mb-4 mb-lg-0">
+                            <h5 class="mb-3 fw-bold">Neptune Inspectorate Lanka (Pte) Ltd</h5>
+                            <p class="mb-1">Level 12, Ceylinco  House</p>
+                            <p class="mb-1">No. 69, </p>
+                            <p class="mb-0">Janadhipathi Mawatha,</p>
+                            <p class="mb-0">Colombo 01,</p>
+                            <p class="mb-0">Sri Lanka</p>
+                        </div>
 
                     <!-- Contact Info - Perfectly Aligned -->
                     <div class="col-lg-6">
@@ -731,6 +741,7 @@ Our inspection services maximize control at every critical point in the supply c
                                                     neptuneinspect@gmail.com
                                                 </a>
                                             </div>
+
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-12">
@@ -753,16 +764,15 @@ Our inspection services maximize control at every critical point in the supply c
                 </div>
 
                 <!-- Copyright -->
-                <div class="row border-top border-light mt-5 pt-4">
-                    <div class="col-12 text-center">
-                        <p class="mb-0">&copy; 2025 Neptune Inspectorate Lanka (Pte) Ltd. All Rights Reserved.</p>
+                <div class="row border-top border-light mt-5 pt-4" >
+                    <div class="col-12 text-center" style="color: #000000;>
+                        <p class="mb-0" >&copy; 2025 Neptune Inspectorate Lanka (Pte) Ltd. All Rights Reserved.</p>
                     </div>
                 </div>
 
             </div>
         </div>
     </div>
-</div>
 
 
 
