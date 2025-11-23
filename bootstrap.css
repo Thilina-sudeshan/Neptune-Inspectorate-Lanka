@@ -4016,8 +4016,7 @@ textarea.form-control-lg {
   margin-bottom: 0;
   list-style: none;
 }
-.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
-  color: var(--bs-navbar-active-color);
+
 }
 .navbar-nav .dropdown-menu {
   position: static;
@@ -8521,8 +8520,13 @@ textarea.form-control-lg {
 
 .text-warning {
   --bs-text-opacity: 1;
-  color: rgba(var(--bs-warning-rgb), var(--bs-text-opacity)) !important;
+  color: rgb(0 0 0 ) !important;
 }
+.navbar-nav .nav-link.active {
+    color: red !important;
+}
+
+
 
 .text-danger {
   --bs-text-opacity: 1;

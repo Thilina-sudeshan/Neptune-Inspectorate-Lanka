@@ -3,15 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Neptune Inspectorate Lanka | Insurance Surveys & P&I Claims</title>
+    <title>Neptune Inspectorate Lanka | Contact </title>
     <link rel="icon" href="Resources/1_TRUST%20CONTROL.png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
-        /* Light blue background for the entire page */
         body {
-            background-color: #e6f2ff; /* Very light blue */
-            background: linear-gradient(to bottom, #f0f8ff, #d6e9ff); /* Optional subtle gradient */
+            background: linear-gradient(to bottom, #f0f8ff, #d6e9ff);
             min-height: 100vh;
         }
         .content {
@@ -23,19 +22,45 @@
             text-align: justify;
             line-height: 1.8;
         }
-        .content h2 {
+        .content h1, .content h2 {
             color: darkred;
             text-align: center;
             font-weight: bold;
         }
-        .content h3 {
-            color: #1e40af;
-            margin-top: 25px;
-        }
 
+        .hover-lift {
+            transition: all 0.3s ease;
+        }
+        .hover-lift:hover {
+            transform: translateY(-8px);
+            background-color: rgba(255,255,255,0.2) !important;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+        }
+        .hover-text-warning:hover {
+            color: #ffc107 !important;
+        }
+        .hover-underline {
+            position: relative;
+        }
+        .hover-underline::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 50%;
+            background-color: #ffc107;
+            transition: all 0.3s ease;
+        }
+        .hover-underline:hover::after {
+            width: 100%;
+            left: 0;
+        }
+        .backdrop-blur-sm {
+            backdrop-filter: blur(8px);
+        }
     </style>
 </head>
-
 <body class="overflow-x-hidden container-fluid">
 
     <!-- Navigation -->
@@ -100,81 +125,83 @@
         </div>
     </div>
 
-    <!-- INSURANCE CONTENT -->
-        <div class="container">
-            <h1 class="text-center mt-5 p-4" style="color: darkred;">Insurance Surveys & P&I Claims</h1>
+    <!-- CONTACT CONTENT -->
+    <div class="container ">
+        <h1 class="text-center mt-5 p-4" style="color: darkred;">Contact </h1>
 
-            <div class="content">
-                <h2>Insurance Surveys, P&I Surveys, Loss Assessors and Claim Settling</h2>
-                <p class="lead text-center">We are Premier Surveyors specializing in Insurance Surveys, Claim Assessment, Loss Assessors and Average Adjusters with expertise in P &amp; I Surveys.</p>
+        <div class="content">
+            <h2 class="mb-5">Get in Touch with Neptune Inspectorate Lanka</h2>
 
-                <p>We offer full exposure to Loss Assessment and claim settling. Our Director was in Senior Management position of P &amp; I Services (Pvt) Ltd. for <strong>35 years</strong> and handled work for <strong>West of England, Oceanus Mutual, New Castle Upon Tyne, Skuld, Gard</strong>, etc. We work amongst the best in the Insurance Industry who are ranked among the top 50 worldwide.</p>
-
-                <p>Our Surveyors are certified by the <strong>Ceylon Chamber of Commerce</strong> with over <strong>25 years</strong> of experience from James Finlays, Acme Insurance, Ceylinco Insurance and Janashakthi.</p>
-
-                <p>Accredited as Surveyors, Average and Loss Adjusters, Damage, Cargo Controllers and Fire for local and international Insurance Companies and P &amp; I Clubs.</p>
-
-                <p>We provide <strong>independent, competent, competitive and comprehensive</strong> professional services globally.</p>
-
-                <div class="row align-items-center g-5 mt-4">
-<!-- 3 Director Photo Cards - Add this BEFORE "Industry Positions Held" section -->
-                <div class="row g-4 mt-4">
-                    <!-- Card 1 -->
-                    <div class="col-lg-4 col-md-4 col-sm-12">
-                        <div class="card border-0 shadow-lg" style="border-radius: 15px; overflow: hidden;">
-                            <img src="Resources/container_insurance.jpeg"
-                                 class="card-img-top"
-                                 alt="Director 1"
-                                 style="height: 200px; object-fit: cover;">
-                        </div>
-                    </div>
-
-                    <!-- Card 2 -->
-                    <div class="col-lg-4 col-md-4 col-sm-12">
-                        <div class="card border-0 shadow-lg " style="border-radius: 15px; overflow: hidden;">
-                            <img src="Resources/con2.jpeg"
-                                 class="card-img-top"
-                                 alt="Director 2"
-                                 style="height: 200px; object-fit: cover;">
-                        </div>
-                    </div>
-
-                    <!-- Card 3 -->
-                    <div class="col-lg-4 col-md-4 col-sm-12">
-                        <div class="card border-0 shadow-lg " style="border-radius: 15px; overflow: hidden;">
-                            <img src="Resources/con3.jpeg"
-                                 class="card-img-top"
-                                 alt="Director 3"
-                                 style="height: 200px; object-fit: cover;">
-                        </div>
-                    </div>
-                </div>
-
-    <!-- Bullet List (Left side) -->
-                <div class="col-lg-6">
-                    <h3 style="color: #8B0000;">Industry Positions Held by Our Director Board:</h3>
-                    <ul style="line-height: 1.8; padding-left: 20px;">
-                        <li>Expert Panel of Continental Insurance</li>
-                        <li>Expert Consultant Panel of HNB Assurance</li>
-                        <li>Senior Management at Ship-owners Claims Bureau (NEPTUNE Italia)</li>
-                        <li>Director in Lloyd’s of London Insurance Agency in Sri Lanka</li>
-                        <li>Chairman, Professional Advisory Committee, National Chamber of Exporters</li>
-                        <li>Advisor to Chairman, Export Development Board</li>
-                    </ul>
-                </div>
-
-                <!-- Image (Right side) -->
-                <div class="col-lg-6 text-center">
-                    <img src="Resources/insurance.jpeg"
-                         alt="Insurance & P&I Expertise"
-                         class="img-fluid rounded shadow-lg"
-                         style="max-height: 460px; border: 10px solid white; box-shadow: 0 15px 35px rgba(0,0,0,0.18);">
-                </div>
-
+            <!-- PERFECT SMALL & ZOOMED MAP -->
+            <div class="rounded-4 overflow-hidden shadow mx-auto"
+                 style="max-width: 900px; height: 260px; border: 8px solid white; box-shadow: 0 12px 35px rgba(0,0,0,0.15);">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d808.9195045328491!2d79.84228512474456!3d6.933188777907684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25925ba9b387b%3A0xf42c2dc8f66529bb!2zQ2V5bGluY28gSG91c2UgKOC3g-C3meC2veC3kuC2seC3iuC2muC3nSDgtrjgtrHgt4rgtq_gt5Lgtrvgtrop!5e0!3m2!1sen!2slk!4v1763869873788!5m2!1sen!2slk" width="900" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
-                <p class="lead text-center mt-4 fw-bold">We would be honoured to serve you professionally!</p>
+
+            <!-- BEAUTIFUL CONTACT DETAILS SECTION -->
+            <div class="contact-info mt-5 p-5 rounded-4 shadow-lg" style="background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); color: white; position: relative; overflow: hidden;">
+                <div style="position: absolute; top: -50px; right: -50px; width: 200px; height: 200px; background: rgba(255,255,255,0.1); border-radius: 50%;"></div>
+                <div style="position: absolute; bottom: -30px; left: -30px; width: 120px; height: 120px; background: rgba(255,255,255,0.08); border-radius: 50%;"></div>
+
+                <div class="text-center mb-5">
+                    <p class="lead fw-bold fs-4 mb-3" style="text-shadow: 0 2px 10px rgba(0,0,0,0.3);">
+                        For Accuracy, Comprehensive, Competent and Consistency on the spot basis it's Neptune - 24 x 7 x 365
+                    </p>
+                </div>
+
+                <h3 class="text-center fw-bold mb-4 text-warning" style="letter-spacing: 1px;">
+                    Neptune Inspectorate Lanka (Pte) Ltd
+                </h3>
+
+                <div class="row justify-content-center g-4">
+                    <div class="col-lg-5 col-md-6">
+                        <div class="text-center p-4 rounded-3 bg-white bg-opacity-10 backdrop-blur-sm hover-lift">
+                            <i class="fas fa-map-marker-alt fa-2x mb-3 text-warning"></i>
+                            <h5 class="fw-bold">Visit Us</h5>
+                            <p class="mb-0 small">
+                                Level 12, Ceylinco House<br>
+                                No. 69, Janadhipathi Mawatha,<br>
+                                Colombo 01,<br>
+                                Sri Lanka
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="text-center p-4 rounded-3 bg-white bg-opacity-10 backdrop-blur-sm hover-lift">
+                            <i class="fas fa-phone-volume fa-2x mb-3 text-success"></i>
+                            <h5 class="fw-bold">Hotline</h5>
+                            <p class="mb-1"><a href="tel:+94742652802" class="text-white text-decoration-none hover-text-warning">+94 74 265 2802</a></p>
+                            <p class="mb-0"><a href="tel:+94742316090" class="text-white text-decoration-none hover-text-warning">+94 74 231 6090</a></p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="text-center p-4 rounded-3 bg-white bg-opacity-10 backdrop-blur-sm hover-lift">
+                            <i class="fas fa-phone fa-2x mb-3 text-info"></i>
+                            <h5 class="fw-bold">Phone</h5>
+                            <p class="mb-0">+94 11 5732000-10</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-6">
+                        <div class="text-center p-4 rounded-3 bg-white bg-opacity-10 backdrop-blur-sm hover-lift">
+                            <i class="fas fa-envelope fa-2x mb-3 text-danger"></i>
+                            <h5 class="fw-bold">E-mail</h5>
+                            <p class="mb-1"><a href="mailto:contact@neptune-inspect.com" class="text-white text-decoration-none hover-text-warning">contact@neptune-inspect.com</a></p>
+                            <p class="mb-0"><a href="mailto:neptuneinspect@gmail.com" class="text-white text-decoration-none hover-text-warning">neptuneinspect@gmail.com</a></p>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-md-6">
+                        <div class="text-center p-4 rounded-3 bg-white bg-opacity-10 backdrop-blur-sm hover-lift">
+                            <i class="fas fa-globe fa-2x mb-3 text-primary"></i>
+                            <h5 class="fw-bold">Website</h5>
+                            <a href="https://www.neptune-inspect.com" target="_blank" class="text-warning fw-bold fs-5 text-decoration-none hover-underline">
+                                www.neptune-inspect.com
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+    </div>
 
     <!-- FOOTER -->
 <div class="row">
