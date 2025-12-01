@@ -12,7 +12,7 @@
     -repeat;
     clip-path: ellipse(140% 100% at top);
 }
-.logoalign{
+.logoalign{font
     margin-bottom: 40px;
     margin-top: 25px;
 }
@@ -299,7 +299,7 @@
     background-repeat: no-repeat;
     background-position: center;
 }
-  
+
 .marine{
     background-image: url(Resources/ship-56569.png);
     background-size: cover;
@@ -313,9 +313,9 @@
     background-position: center;
 
 }
-  
-  
-  
+
+
+
 
 
 
