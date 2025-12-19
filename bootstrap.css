@@ -8518,10 +8518,7 @@ textarea.form-control-lg {
   color: rgba(var(--bs-info-rgb), var(--bs-text-opacity)) !important;
 }
 
-.text-warning {
-  --bs-text-opacity: 1;
-  color: rgb(0 0 0 ) !important;
-}
+.text-warning color: rgb(26 29 251) !important;
 .navbar-nav .nav-link.active {
     color: red !important;
 }
