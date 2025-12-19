@@ -5,6 +5,8 @@
     clip-path: ellipse(97% 100% at top);
 }
 
+
+
 .a2 {
     background: linear-gradient(140deg, rgb(163, 23, 23), rgb(36, 133, 218));
     background-size: contain;
@@ -21,6 +23,15 @@
     height: 100vh;
 }
 
+/* Desktop Navigation Links - Blue font color for all tabs */
+.navbar-nav .nav-link {
+    color: #0066cc !important; /* Blue font color */
+}
+
+/* Mobile Offcanvas Links - Blue font color */
+.offcanvas-body a {
+    color: #0066cc !important; /* Blue font color */
+}
 .fade-in {
     opacity: 0;
     transition: opacity 1.2s ease-in;
