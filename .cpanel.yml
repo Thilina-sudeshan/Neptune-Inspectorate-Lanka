@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/neptu55/public_html/
+    - /bin/cp -R * $DEPLOYPATH
